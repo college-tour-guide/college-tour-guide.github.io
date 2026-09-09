@@ -8,7 +8,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 15
+  "beachMiles": 15,
+  "religion": null,
+  "religionNote": null
  },
  "UC Davis": {
   "ratio": 21,
@@ -18,7 +20,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 75
+  "beachMiles": 75,
+  "religion": null,
+  "religionNote": null
  },
  "UC Irvine": {
   "ratio": 18,
@@ -28,7 +32,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 6
+  "beachMiles": 6,
+  "religion": null,
+  "religionNote": null
  },
  "UCLA": {
   "ratio": 18,
@@ -38,7 +44,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 6
+  "beachMiles": 6,
+  "religion": null,
+  "religionNote": null
  },
  "UC Merced": {
   "ratio": 21,
@@ -48,7 +56,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 110
+  "beachMiles": 110,
+  "religion": null,
+  "religionNote": null
  },
  "UC Riverside": {
   "ratio": 23,
@@ -58,7 +68,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 40
+  "beachMiles": 40,
+  "religion": null,
+  "religionNote": null
  },
  "UC San Diego": {
   "ratio": 19,
@@ -68,7 +80,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "La Jolla is a neighborhood of San Diego",
   "nature": 4,
-  "beachMiles": 1
+  "beachMiles": 1,
+  "religion": null,
+  "religionNote": null
  },
  "UC Santa Barbara": {
   "ratio": 17,
@@ -78,7 +92,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "campus is in Isla Vista/Goleta next to Santa Barbara",
   "nature": 4,
-  "beachMiles": 0
+  "beachMiles": 0,
+  "religion": null,
+  "religionNote": null
  },
  "UC Santa Cruz": {
   "ratio": 22,
@@ -88,7 +104,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 2
+  "beachMiles": 2,
+  "religion": null,
+  "religionNote": null
  },
  "CSU Bakersfield": {
   "ratio": 16,
@@ -98,7 +116,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 110
+  "beachMiles": 110,
+  "religion": null,
+  "religionNote": null
  },
  "CSU Channel Islands": {
   "ratio": 15,
@@ -108,7 +128,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 8
+  "beachMiles": 8,
+  "religion": null,
+  "religionNote": null
  },
  "Chico State": {
   "ratio": 20,
@@ -118,7 +140,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 160
+  "beachMiles": 160,
+  "religion": null,
+  "religionNote": null
  },
  "CSU Dominguez Hills": {
   "ratio": 18,
@@ -128,7 +152,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 9
+  "beachMiles": 9,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State East Bay": {
   "ratio": 17,
@@ -138,7 +164,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "Fresno State": {
   "ratio": 18,
@@ -148,7 +176,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 130
+  "beachMiles": 130,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State Fullerton": {
   "ratio": 22,
@@ -158,7 +188,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 14
+  "beachMiles": 14,
+  "religion": null,
+  "religionNote": null
  },
  "Cal Poly Humboldt": {
   "ratio": 14,
@@ -168,7 +200,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 6
+  "beachMiles": 6,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State Long Beach": {
   "ratio": 19,
@@ -178,7 +212,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 3
+  "beachMiles": 3,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State LA": {
   "ratio": 19,
@@ -188,7 +224,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 1,
-  "beachMiles": 20
+  "beachMiles": 20,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State Monterey Bay": {
   "ratio": 16,
@@ -198,7 +236,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 1
+  "beachMiles": 1,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State Northridge": {
   "ratio": 21,
@@ -208,7 +248,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Northridge is a San Fernando Valley neighborhood of Los Angeles",
   "nature": 2,
-  "beachMiles": 20
+  "beachMiles": 20,
+  "religion": null,
+  "religionNote": null
  },
  "Cal Poly Pomona": {
   "ratio": 23,
@@ -218,7 +260,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 35
+  "beachMiles": 35,
+  "religion": null,
+  "religionNote": null
  },
  "Sacramento State": {
   "ratio": 21,
@@ -228,7 +272,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 90
+  "beachMiles": 90,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State San Bernardino": {
   "ratio": 19,
@@ -238,7 +284,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 55
+  "beachMiles": 55,
+  "religion": null,
+  "religionNote": null
  },
  "San Diego State": {
   "ratio": 22,
@@ -248,7 +296,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 9
+  "beachMiles": 9,
+  "religion": null,
+  "religionNote": null
  },
  "San Francisco State": {
   "ratio": 16,
@@ -258,7 +308,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 2
+  "beachMiles": 2,
+  "religion": null,
+  "religionNote": null
  },
  "San José State": {
   "ratio": 18,
@@ -268,7 +320,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 1,
-  "beachMiles": 30
+  "beachMiles": 30,
+  "religion": null,
+  "religionNote": null
  },
  "Cal Poly San Luis Obispo": {
   "ratio": 18,
@@ -278,7 +332,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 10
+  "beachMiles": 10,
+  "religion": null,
+  "religionNote": null
  },
  "Cal State San Marcos": {
   "ratio": 21,
@@ -288,7 +344,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 15
+  "beachMiles": 15,
+  "religion": null,
+  "religionNote": null
  },
  "Sonoma State": {
   "ratio": 15,
@@ -298,7 +356,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "Stanislaus State": {
   "ratio": 16,
@@ -308,7 +368,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 100
+  "beachMiles": 100,
+  "religion": null,
+  "religionNote": null
  },
  "Cal Poly Maritime Academy": {
   "ratio": 10,
@@ -318,7 +380,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 30
+  "beachMiles": 30,
+  "religion": null,
+  "religionNote": null
  },
  "Brown": {
   "ratio": 6,
@@ -328,7 +392,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "Columbia": {
   "ratio": 6,
@@ -338,7 +404,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Morningside Heights, Upper Manhattan",
   "nature": 1,
-  "beachMiles": 15
+  "beachMiles": 15,
+  "religion": null,
+  "religionNote": null
  },
  "Cornell": {
   "ratio": 9,
@@ -348,7 +416,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 250
+  "beachMiles": 250,
+  "religion": null,
+  "religionNote": null
  },
  "Dartmouth": {
   "ratio": 7,
@@ -358,7 +428,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "rural Upper Valley; nearest city is 2 hours away",
   "nature": 5,
-  "beachMiles": 110
+  "beachMiles": 110,
+  "religion": null,
+  "religionNote": null
  },
  "Harvard": {
   "ratio": 7,
@@ -368,7 +440,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "across the river from Boston",
   "nature": 2,
-  "beachMiles": 10
+  "beachMiles": 10,
+  "religion": null,
+  "religionNote": null
  },
  "Penn": {
   "ratio": 8,
@@ -378,7 +452,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 60
+  "beachMiles": 60,
+  "religion": null,
+  "religionNote": null
  },
  "Princeton": {
   "ratio": 5,
@@ -388,7 +464,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Yale": {
   "ratio": 6,
@@ -398,7 +476,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 5
+  "beachMiles": 5,
+  "religion": null,
+  "religionNote": null
  },
  "Williams": {
   "ratio": 6,
@@ -408,7 +488,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 150
+  "beachMiles": 150,
+  "religion": null,
+  "religionNote": null
  },
  "Amherst": {
   "ratio": 7,
@@ -418,7 +500,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 110
+  "beachMiles": 110,
+  "religion": null,
+  "religionNote": null
  },
  "Swarthmore": {
   "ratio": 8,
@@ -428,7 +512,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 70
+  "beachMiles": 70,
+  "religion": null,
+  "religionNote": null
  },
  "Pomona": {
   "ratio": 7,
@@ -438,7 +524,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Claremont, 35 miles east of downtown Los Angeles",
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Wellesley": {
   "ratio": 7,
@@ -448,7 +536,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "Bowdoin": {
   "ratio": 9,
@@ -458,7 +548,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 8
+  "beachMiles": 8,
+  "religion": null,
+  "religionNote": null
  },
  "Carleton": {
   "ratio": 8,
@@ -468,7 +560,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 400
+  "beachMiles": 400,
+  "religion": null,
+  "religionNote": null
  },
  "Middlebury": {
   "ratio": 9,
@@ -478,7 +572,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 180
+  "beachMiles": 180,
+  "religion": null,
+  "religionNote": null
  },
  "Davidson": {
   "ratio": 9,
@@ -488,7 +584,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 200
+  "beachMiles": 200,
+  "religion": "Presbyterian Church (USA)",
+  "religionNote": "historic affiliation; secular in practice"
  },
  "Harvey Mudd": {
   "ratio": 8,
@@ -498,7 +596,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Claremont, 35 miles east of downtown Los Angeles",
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Claremont McKenna": {
   "ratio": 8,
@@ -508,7 +608,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Claremont, 35 miles east of downtown Los Angeles",
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Haverford": {
   "ratio": 8,
@@ -518,7 +620,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Main Line suburb of Philadelphia",
   "nature": 4,
-  "beachMiles": 75
+  "beachMiles": 75,
+  "religion": null,
+  "religionNote": null
  },
  "Vassar": {
   "ratio": 8,
@@ -528,7 +632,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 90
+  "beachMiles": 90,
+  "religion": null,
+  "religionNote": null
  },
  "Grinnell": {
   "ratio": 9,
@@ -538,7 +644,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 500
+  "beachMiles": 500,
+  "religion": null,
+  "religionNote": null
  },
  "Wesleyan": {
   "ratio": 7,
@@ -548,7 +656,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "Scripps": {
   "ratio": 11,
@@ -558,7 +668,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Claremont, 35 miles east of downtown Los Angeles",
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Pitzer": {
   "ratio": 10,
@@ -568,7 +680,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Claremont, 35 miles east of downtown Los Angeles",
   "nature": 3,
-  "beachMiles": 45
+  "beachMiles": 45,
+  "religion": null,
+  "religionNote": null
  },
  "Occidental": {
   "ratio": 9,
@@ -578,7 +692,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Eagle Rock neighborhood of Los Angeles",
   "nature": 3,
-  "beachMiles": 20
+  "beachMiles": 20,
+  "religion": null,
+  "religionNote": null
  },
  "Whitman": {
   "ratio": 10,
@@ -588,7 +704,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 250
+  "beachMiles": 250,
+  "religion": null,
+  "religionNote": null
  },
  "Reed": {
   "ratio": 9,
@@ -598,7 +716,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 80
+  "beachMiles": 80,
+  "religion": null,
+  "religionNote": null
  },
  "Stanford": {
   "ratio": 6,
@@ -608,7 +728,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "own campus beside Palo Alto",
   "nature": 4,
-  "beachMiles": 30
+  "beachMiles": 30,
+  "religion": null,
+  "religionNote": null
  },
  "Caltech": {
   "ratio": 3,
@@ -618,7 +740,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 25
+  "beachMiles": 25,
+  "religion": null,
+  "religionNote": null
  },
  "USC": {
   "ratio": 9,
@@ -628,7 +752,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "University Park, south of downtown Los Angeles",
   "nature": 1,
-  "beachMiles": 12
+  "beachMiles": 12,
+  "religion": null,
+  "religionNote": null
  },
  "Santa Clara": {
   "ratio": 10,
@@ -638,7 +764,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 30
+  "beachMiles": 30,
+  "religion": "Roman Catholic",
+  "religionNote": "Jesuit"
  },
  "Loyola Marymount": {
   "ratio": 11,
@@ -648,7 +776,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Westchester bluff above Playa del Rey",
   "nature": 3,
-  "beachMiles": 2
+  "beachMiles": 2,
+  "religion": "Roman Catholic",
+  "religionNote": "Jesuit"
  },
  "University of San Diego": {
   "ratio": 14,
@@ -658,7 +788,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 4
+  "beachMiles": 4,
+  "religion": "Roman Catholic",
+  "religionNote": "independent Catholic"
  },
  "Pepperdine": {
   "ratio": 13,
@@ -668,7 +800,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 1
+  "beachMiles": 1,
+  "religion": "Churches of Christ",
+  "religionNote": "students of all faiths; chapel attendance required at Seaver"
  },
  "Chapman": {
   "ratio": 12,
@@ -678,7 +812,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 12
+  "beachMiles": 12,
+  "religion": "Christian Church (Disciples of Christ)",
+  "religionNote": "historic affiliation; secular in practice"
  },
  "University of Portland": {
   "ratio": 9,
@@ -688,7 +824,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 80
+  "beachMiles": 80,
+  "religion": "Roman Catholic",
+  "religionNote": "Congregation of Holy Cross"
  },
  "Gonzaga": {
   "ratio": 12,
@@ -698,7 +836,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 300
+  "beachMiles": 300,
+  "religion": "Roman Catholic",
+  "religionNote": "Jesuit"
  },
  "MIT": {
   "ratio": 3,
@@ -708,7 +848,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "across the river from Boston",
   "nature": 1,
-  "beachMiles": 10
+  "beachMiles": 10,
+  "religion": null,
+  "religionNote": null
  },
  "University of Chicago": {
   "ratio": 5,
@@ -718,7 +860,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 900
+  "beachMiles": 900,
+  "religion": null,
+  "religionNote": null
  },
  "Duke": {
   "ratio": 6,
@@ -728,7 +872,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 5,
-  "beachMiles": 150
+  "beachMiles": 150,
+  "religion": "United Methodist",
+  "religionNote": "historic affiliation; secular in practice"
  },
  "Northwestern": {
   "ratio": 6,
@@ -738,7 +884,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Evanston, on the lake just north of Chicago",
   "nature": 3,
-  "beachMiles": 900
+  "beachMiles": 900,
+  "religion": null,
+  "religionNote": null
  },
  "Johns Hopkins": {
   "ratio": 6,
@@ -748,7 +896,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Homewood campus, north Baltimore",
   "nature": 2,
-  "beachMiles": 150
+  "beachMiles": 150,
+  "religion": null,
+  "religionNote": null
  },
  "Rice": {
   "ratio": 6,
@@ -758,7 +908,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 50
+  "beachMiles": 50,
+  "religion": null,
+  "religionNote": null
  },
  "Vanderbilt": {
   "ratio": 7,
@@ -768,7 +920,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 450
+  "beachMiles": 450,
+  "religion": null,
+  "religionNote": null
  },
  "Notre Dame": {
   "ratio": 9,
@@ -778,7 +932,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "own campus just north of South Bend",
   "nature": 4,
-  "beachMiles": 600
+  "beachMiles": 600,
+  "religion": "Roman Catholic",
+  "religionNote": "Congregation of Holy Cross"
  },
  "Carnegie Mellon": {
   "ratio": 5,
@@ -788,7 +944,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 350
+  "beachMiles": 350,
+  "religion": null,
+  "religionNote": null
  },
  "Georgetown": {
   "ratio": 11,
@@ -798,7 +956,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 130
+  "beachMiles": 130,
+  "religion": "Roman Catholic",
+  "religionNote": "Jesuit"
  },
  "Tufts": {
   "ratio": 10,
@@ -808,7 +968,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Medford/Somerville line, 5 miles from downtown Boston",
   "nature": 3,
-  "beachMiles": 12
+  "beachMiles": 12,
+  "religion": null,
+  "religionNote": null
  },
  "Boston College": {
   "ratio": 13,
@@ -818,7 +980,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": "Chestnut Hill, on the Boston-Newton line",
   "nature": 3,
-  "beachMiles": 12
+  "beachMiles": 12,
+  "religion": "Roman Catholic",
+  "religionNote": "Jesuit"
  },
  "Northeastern": {
   "ratio": 16,
@@ -828,7 +992,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 1,
-  "beachMiles": 8
+  "beachMiles": 8,
+  "religion": null,
+  "religionNote": null
  },
  "Boston University": {
   "ratio": 10,
@@ -838,7 +1004,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 1,
-  "beachMiles": 8
+  "beachMiles": 8,
+  "religion": null,
+  "religionNote": null
  },
  "NYU": {
   "ratio": 8,
@@ -848,7 +1016,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 1,
-  "beachMiles": 15
+  "beachMiles": 15,
+  "religion": null,
+  "religionNote": null
  },
  "Wake Forest": {
   "ratio": 9,
@@ -858,7 +1028,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 4,
-  "beachMiles": 250
+  "beachMiles": 250,
+  "religion": null,
+  "religionNote": null
  },
  "Case Western Reserve": {
   "ratio": 9,
@@ -868,7 +1040,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 2,
-  "beachMiles": 700
+  "beachMiles": 700,
+  "religion": null,
+  "religionNote": null
  },
  "Tulane": {
   "ratio": 8,
@@ -878,7 +1052,9 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 70
+  "beachMiles": 70,
+  "religion": null,
+  "religionNote": null
  },
  "Emory": {
   "ratio": 9,
@@ -888,12 +1064,15 @@ window.CAMPUS_PROFILE={
   "townPopYear": "2020",
   "townNote": null,
   "nature": 3,
-  "beachMiles": 270
+  "beachMiles": 270,
+  "religion": "United Methodist",
+  "religionNote": "historic affiliation; secular in practice"
  }
 };
 window.CAMPUS_PROFILE_META={
  "ratioSource": "IPEDS Fall Enrollment survey EF2023D, student-to-faculty ratio and full-time retention, fall 2023",
  "townSource": "2020 Census population via Wikidata",
  "natureSource": "4ward rating, rubric in build_profile.py",
- "beachSource": "approximate road miles to the nearest ocean beach, hand-entered"
+ "beachSource": "approximate road miles to the nearest ocean beach, hand-entered",
+ "religionSource": "IPEDS Institutional Characteristics survey IC2024, RELAFFIL (institution-reported religious affiliation)"
 };
