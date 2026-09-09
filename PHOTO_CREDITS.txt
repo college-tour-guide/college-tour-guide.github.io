@@ -1,0 +1,421 @@
+Campus photographs from Wikimedia Commons. Each is under the license shown; keep this file with the photos.
+
+UC Berkeley
+  file:    File:Berkeley glade afternoon.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Berkeley_glade_afternoon.jpg
+  author:  Gku
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+UC Davis
+  file:    File:Aerial view of UC Davis.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Aerial_view_of_UC_Davis.jpg
+  author:  Arlen from SF, CA
+  license: CC BY 2.0
+  via:     Wikidata image (P18)
+
+UC Irvine
+  file:    File:Campus of the University of California, Irvine (aerial view, circa 2006).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Campus_of_the_University_of_California,_Irvine_(aerial_view,_circa_2006).jpg
+  author:  No machine-readable author provided. Complex01 assumed (based on copyright claims).
+  license: CC BY-SA 3.0
+  via:     Commons search: "University of California, Irvine" campus
+
+UCLA
+  file:    File:Royce Hall, University of California, Los Angeles (23-09-2003).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Royce_Hall,_University_of_California,_Los_Angeles_(23-09-2003).jpg
+  author:  unknown
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+UC Merced
+  file:    File:Kolligan library.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Kolligan_library.jpg
+  author:  Qymekkam
+  license: CC BY-SA 3.0
+  via:     override
+
+UC Riverside
+  file:    File:UCR University Ave entrance.JPG
+  source:  https://commons.wikimedia.org/wiki/File:UCR_University_Ave_entrance.JPG
+  author:  Original uploader was Amerique at en.wikipedia
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+UC San Diego
+  file:    File:Price Center, UCSD.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Price_Center,_UCSD.jpg
+  author:  Alex Hansen
+  license: CC BY 2.0
+  via:     Wikidata image (P18)
+
+UC Santa Barbara
+  file:    File:UCSB University Center and Storke Tower.jpg
+  source:  https://commons.wikimedia.org/wiki/File:UCSB_University_Center_and_Storke_Tower.jpg
+  author:  Coolcaesar
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+UC Santa Cruz
+  file:    File:UCSC & Santa Cruz Aerial view.jpg
+  source:  https://commons.wikimedia.org/wiki/File:UCSC_%26_Santa_Cruz_Aerial_view.jpg
+  author:  Doc Searls from Santa Barbara, USA
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+CSU Bakersfield
+  file:    File:Library CSUB.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Library_CSUB.jpg
+  author:  unknown
+  license: Public domain
+  via:     override
+
+CSU Channel Islands
+  file:    File:CSU Channel Islands.jpg
+  source:  https://commons.wikimedia.org/wiki/File:CSU_Channel_Islands.jpg
+  author:  Kevin
+  license: CC BY 2.0
+  via:     Wikidata image (P18)
+
+Chico State
+  file:    File:California State University, Chico - panoramio (6).jpg
+  source:  https://commons.wikimedia.org/wiki/File:California_State_University,_Chico_-_panoramio_(6).jpg
+  author:  MARELBU
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+CSU Dominguez Hills
+  file:    File:New-sci-innov-bldg.jpg
+  source:  https://commons.wikimedia.org/wiki/File:New-sci-innov-bldg.jpg
+  author:  Wiki-bulum
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Cal State East Bay
+  file:    File:Csueb view.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Csueb_view.jpg
+  author:  Jennifer Williams
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+Fresno State
+  file:    File:2009-0725-CA-CSUF-ThomasAdministration.jpg
+  source:  https://commons.wikimedia.org/wiki/File:2009-0725-CA-CSUF-ThomasAdministration.jpg
+  author:  Bobak Ha'Eri
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Cal State Fullerton
+  file:    File:Cal State Fullerton Student Recreation Center (Fullerton, CA).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Cal_State_Fullerton_Student_Recreation_Center_(Fullerton,_CA).jpg
+  author:  Spatms
+  license: CC BY-SA 4.0
+  via:     Commons search: California State University, Fullerton campus
+
+Cal Poly Humboldt
+  file:    File:Humboldt State University Founders Hall.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Humboldt_State_University_Founders_Hall.jpg
+  author:  Jaradpetroske
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Cal State Long Beach
+  file:    File:Carpenter Performing Arts Center (Long Beach, California, March 2008).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Carpenter_Performing_Arts_Center_(Long_Beach,_California,_March_2008).jpg
+  author:  Alan Ray
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Cal State LA
+  file:    File:Cal State University, Los Angeles.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Cal_State_University,_Los_Angeles.jpg
+  author:  Justefrain
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Cal State Monterey Bay
+  file:    File:CSU Monterey Bay 2003.jpg
+  source:  https://commons.wikimedia.org/wiki/File:CSU_Monterey_Bay_2003.jpg
+  author:  DirectorG at en.wikipedia
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Cal State Northridge
+  file:    File:CSUN Central Campus.JPG
+  source:  https://commons.wikimedia.org/wiki/File:CSUN_Central_Campus.JPG
+  author:  Cbl62 (talk)
+  license: CC BY-SA 3.0
+  via:     Commons search: "California State University, Northridge" campus
+
+Cal Poly Pomona
+  file:    File:CLA Portrait.jpg
+  source:  https://commons.wikimedia.org/wiki/File:CLA_Portrait.jpg
+  author:  Victorrocha
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Sacramento State
+  file:    File:Guy West Bridge (5248634716) (cropped).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Guy_West_Bridge_(5248634716)_(cropped).jpg
+  author:  Matthew Fern from Citrus Heights, CA, United States
+  license: CC BY-SA 2.0
+  via:     override
+
+Cal State San Bernardino
+  file:    File:University Ave Entrance, CSUSB.JPG
+  source:  https://commons.wikimedia.org/wiki/File:University_Ave_Entrance,_CSUSB.JPG
+  author:  Amerique
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+San Diego State
+  file:    File:Sdsumain.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Sdsumain.jpg
+  author:  Wikipedia User:Geographer
+  license: CC BY 1.0
+  via:     Wikidata image (P18)
+
+San Francisco State
+  file:    File:SFSU campus center.jpg
+  source:  https://commons.wikimedia.org/wiki/File:SFSU_campus_center.jpg
+  author:  Grandmaster Huon
+  license: CC0
+  via:     Commons search: "San Francisco State University" campus
+
+San José State
+  file:    File:2008-0817-SJSU-MLKlib.jpg
+  source:  https://commons.wikimedia.org/wiki/File:2008-0817-SJSU-MLKlib.jpg
+  author:  Bobak Ha'Eri
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Cal Poly San Luis Obispo
+  file:    File:Performing Arts Center Cal Poly San Luis Obispo.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Performing_Arts_Center_Cal_Poly_San_Luis_Obispo.jpg
+  author:  Barrydfloyd
+  license: CC BY-SA 4.0
+  via:     override
+
+Cal State San Marcos
+  file:    File:Cal State San Marcos library.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Cal_State_San_Marcos_library.jpg
+  author:  Eamuscatuli at English Wikipedia
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Sonoma State
+  file:    File:SSU Salazar Hall 4646.png
+  source:  https://commons.wikimedia.org/wiki/File:SSU_Salazar_Hall_4646.png
+  author:  Stepheng3
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Stanislaus State
+  file:    File:CSUSbookstore.JPG
+  source:  https://commons.wikimedia.org/wiki/File:CSUSbookstore.JPG
+  author:  Intothewoods29
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Cal Poly Maritime Academy
+  file:    File:Golden bear.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Golden_bear.jpg
+  author:  The original uploader was Frijole at English Wikipedia.
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+Brown
+  file:    File:Manning Chapel.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Manning_Chapel.jpg
+  author:  No machine-readable author provided. Dale182 assumed (based on copyright claims).
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Columbia
+  file:    File:Columbia University - Low Memorial Library (48170370506).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Columbia_University_-_Low_Memorial_Library_(48170370506).jpg
+  author:  Ajay Suresh from New York, NY, USA
+  license: CC BY 2.0
+  via:     Wikidata image (P18)
+
+Cornell
+  file:    File:Cornell University, Ho Plaza and Sage Hall.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Cornell_University,_Ho_Plaza_and_Sage_Hall.jpg
+  author:  sach1tb
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+Dartmouth
+  file:    File:Dartmouth College campus 2007-06-23 Dartmouth Hall 02.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Dartmouth_College_campus_2007-06-23_Dartmouth_Hall_02.JPG
+  author:  Kane5187
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Harvard
+  file:    File:Sanders theater 2009y.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Sanders_theater_2009y.JPG
+  author:  chensiyuan
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Penn
+  file:    File:College Hall, University of Pennsylvania.jpg
+  source:  https://commons.wikimedia.org/wiki/File:College_Hall,_University_of_Pennsylvania.jpg
+  author:  Michel Alexandre Salim
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+Princeton
+  file:    File:Princeton University campus-077.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Princeton_University_campus-077.jpg
+  author:  Elisa.rolle
+  license: CC BY-SA 3.0
+  via:     Commons search: "Princeton University" campus
+
+Yale
+  file:    File:Yale Law School in the Sterling Law Building.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Yale_Law_School_in_the_Sterling_Law_Building.jpg
+  author:  Pradipta Mitra
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Williams
+  file:    File:Williams College - Griffin Hall.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Williams_College_-_Griffin_Hall.JPG
+  author:  Daderot
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Amherst
+  file:    File:Frost Library, Amherst College.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Frost_Library,_Amherst_College.jpg
+  author:  Kenneth C. Zirkel
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Swarthmore
+  file:    File:Parrish Hall.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Parrish_Hall.jpg
+  author:  Ugen64 at English Wikipedia
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Pomona
+  file:    File:Crookshank Hall.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Crookshank_Hall.jpg
+  author:  Officialpomonacollege
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Wellesley
+  file:    File:Green Hall, Wellesley College, Wellesley MA.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Green_Hall,_Wellesley_College,_Wellesley_MA.jpg
+  author:  John Phelan
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Bowdoin
+  file:    File:Hubbardhallb.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Hubbardhallb.jpg
+  author:  Polarbear 11
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Carleton
+  file:    File:Carleton College Aerial.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Carleton_College_Aerial.jpg
+  author:  Dogs1337
+  license: CC0
+  via:     Wikidata image (P18)
+
+Middlebury
+  file:    File:McCardellBicentennialHall.jpg
+  source:  https://commons.wikimedia.org/wiki/File:McCardellBicentennialHall.jpg
+  author:  PenelopeIsMe
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Davidson
+  file:    File:Chambers Building, Davidson College (Davidson, North Carolina).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Chambers_Building,_Davidson_College_(Davidson,_North_Carolina).jpg
+  author:  Dacoslett at English Wikipedia
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Harvey Mudd
+  file:    File:Hmc-dartmouth entrance.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Hmc-dartmouth_entrance.jpg
+  author:  The original uploader was Imagine at English Wikipedia.
+  license: CC BY 2.5
+  via:     Wikidata image (P18)
+
+Claremont McKenna
+  file:    File:Claremont Mckenna College campus.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Claremont_Mckenna_College_campus.jpg
+  author:  Sdkb
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Haverford
+  file:    File:Haverfordfounders.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Haverfordfounders.jpg
+  author:  Jackbauerinvc (talk)
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Vassar
+  file:    File:New England Building, November 2014.jpg
+  source:  https://commons.wikimedia.org/wiki/File:New_England_Building,_November_2014.jpg
+  author:  Collin Knopp-Schwyn
+  license: CC BY 4.0
+  via:     Wikidata image (P18)
+
+Grinnell
+  file:    File:Grinnell 002.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Grinnell_002.JPG
+  author:  Aureliusxv
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Wesleyan
+  file:    File:College row at wesleyan.jpg
+  source:  https://commons.wikimedia.org/wiki/File:College_row_at_wesleyan.jpg
+  author:  Smartalic34 (talk)
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Scripps
+  file:    File:Scripps College for Women-9.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Scripps_College_for_Women-9.jpg
+  author:  Lure Photography
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Pitzer
+  file:    File:Cat-Grove-House.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Cat-Grove-House.jpg
+  author:  Lauriealosh
+  license: CC BY-SA 4.0
+  via:     override
+
+Occidental
+  file:    File:Johnson Student Center and Freeman College Union (cropped).jpg
+  source:  https://commons.wikimedia.org/wiki/File:Johnson_Student_Center_and_Freeman_College_Union_(cropped).jpg
+  author:  The original uploader was Geographer at English Wikipedia.
+  license: CC BY 1.0
+  via:     Wikidata image (P18)
+
+Whitman
+  file:    File:Memorial Building Whitman College.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Memorial_Building_Whitman_College.jpg
+  author:  The original uploader was Adamsofen at English Wikipedia.
+  license: CC BY 2.0
+  via:     Wikidata image (P18)
+
+Reed
+  file:    File:EliotHallReedCollege.jpg
+  source:  https://commons.wikimedia.org/wiki/File:EliotHallReedCollege.jpg
+  author:  User:Cacophony
+  license: CC BY-SA 2.5
+  via:     Wikidata image (P18)
