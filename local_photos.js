@@ -59,8 +59,37 @@ window.LOCAL_PHOTOS={
  "Pitzer": "photos/pitzer-college.jpg",
  "Occidental": "photos/occidental-college.jpg",
  "Whitman": "photos/whitman-college.jpg",
- "Reed": "photos/reed-college.jpg"
+ "Reed": "photos/reed-college.jpg",
+ "Stanford": "photos/stanford-university.jpg",
+ "Caltech": "photos/california-institute-of-technology.jpg",
+ "USC": "photos/university-of-southern-california.jpg",
+ "Santa Clara": "photos/santa-clara-university.jpg",
+ "Loyola Marymount": "photos/loyola-marymount-university.jpg",
+ "University of San Diego": "photos/university-of-san-diego.jpg",
+ "Pepperdine": "photos/pepperdine-university.jpg",
+ "Chapman": "photos/chapman-university.jpg",
+ "University of Portland": "photos/university-of-portland.jpg",
+ "Gonzaga": "photos/gonzaga-university.jpg",
+ "MIT": "photos/massachusetts-institute-of-technology.jpg",
+ "University of Chicago": "photos/university-of-chicago.jpg",
+ "Duke": "photos/duke-university.jpg",
+ "Northwestern": "photos/northwestern-university.jpg",
+ "Johns Hopkins": "photos/johns-hopkins-university.jpg",
+ "Rice": "photos/rice-university.jpg",
+ "Vanderbilt": "photos/vanderbilt-university.jpg",
+ "Notre Dame": "photos/university-of-notre-dame.jpg",
+ "Carnegie Mellon": "photos/carnegie-mellon-university.jpg",
+ "Georgetown": "photos/georgetown-university.jpg",
+ "Tufts": "photos/tufts-university.jpg",
+ "Boston College": "photos/boston-college.jpg",
+ "Northeastern": "photos/northeastern-university.jpg",
+ "Boston University": "photos/boston-university.jpg",
+ "NYU": "photos/new-york-university.jpg",
+ "Wake Forest": "photos/wake-forest-university.jpg",
+ "Case Western Reserve": "photos/case-western-reserve-university.jpg",
+ "Tulane": "photos/tulane-university.jpg",
+ "Emory": "photos/emory-university.jpg"
 };
 window.PHOTO_SETUP_COMPLETE=true;
-window.PHOTO_SETUP_SUCCESS=60;
+window.PHOTO_SETUP_SUCCESS=89;
 window.PHOTO_SETUP_FAILED=[];

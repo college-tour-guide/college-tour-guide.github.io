@@ -419,3 +419,206 @@ Reed
   author:  User:Cacophony
   license: CC BY-SA 2.5
   via:     Wikidata image (P18)
+
+Stanford
+  file:    File:Stanford Oval May 2011 panorama.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Stanford_Oval_May_2011_panorama.jpg
+  author:  King of Hearts
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Caltech
+  file:    File:Caltech Entrance.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Caltech_Entrance.jpg
+  author:  Canon.vs.nikon
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+USC
+  file:    File:052607-016-BovardHall-USC.jpg
+  source:  https://commons.wikimedia.org/wiki/File:052607-016-BovardHall-USC.jpg
+  author:  Bobak Ha'Eri
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+Santa Clara
+  file:    File:SCUCampus.jpg
+  source:  https://commons.wikimedia.org/wiki/File:SCUCampus.jpg
+  author:  Omar A.
+  license: CC BY-SA 2.0
+  via:     Wikidata image (P18)
+
+Loyola Marymount
+  file:    File:Loyola Marymount SunkenGardens SacredHeartChapel.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Loyola_Marymount_SunkenGardens_SacredHeartChapel.jpg
+  author:  Mishigaki at English Wikipedia
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+University of San Diego
+  file:    File:University of San Diego (cropped).jpg
+  source:  https://commons.wikimedia.org/wiki/File:University_of_San_Diego_(cropped).jpg
+  author:  Transfeo
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Pepperdine
+  file:    File:Malibu-Pepperdine-university-Aerial-from-north-August-2014 crop.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Malibu-Pepperdine-university-Aerial-from-north-August-2014_crop.jpg
+  author:  Alfred Twu; cropped by Beyond My Ken (talk) 01:10, 30 January 2016 (UTC)
+  license: CC0
+  via:     override
+
+Chapman
+  file:    File:2008-0614-LA-OC-005-Chapman.jpg
+  source:  https://commons.wikimedia.org/wiki/File:2008-0614-LA-OC-005-Chapman.jpg
+  author:  Bobak Ha'Eri
+  license: CC BY 3.0
+  via:     Wikidata image (P18)
+
+University of Portland
+  file:    File:University of Portland (497062163).jpg
+  source:  https://commons.wikimedia.org/wiki/File:University_of_Portland_(497062163).jpg
+  author:  David Jones from Isle of Wight, United Kingdom
+  license: CC BY 2.0
+  via:     override
+
+Gonzaga
+  file:    File:Gonzaga University 360.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Gonzaga_University_360.jpg
+  author:  Farwestern Photo by Gregg M. Erickson
+  license: Public domain
+  via:     Wikidata image (P18)
+
+MIT
+  file:    File:MIT Dome night1 Edit.jpg
+  source:  https://commons.wikimedia.org/wiki/File:MIT_Dome_night1_Edit.jpg
+  author:  Fcb981, this edited version by Thermos
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+University of Chicago
+  file:    File:Ivy on Chicago University campus building.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Ivy_on_Chicago_University_campus_building.jpg
+  author:  Spikebrennan at en.wikipedia
+  license: CC BY-SA 2.5
+  via:     Commons search: "University of Chicago" campus
+
+Duke
+  file:    File:West Campus path at Duke University in July 2025.jpg
+  source:  https://commons.wikimedia.org/wiki/File:West_Campus_path_at_Duke_University_in_July_2025.jpg
+  author:  Sdkb
+  license: CC BY-SA 4.0
+  via:     Commons search: "Duke University" campus
+
+Northwestern
+  file:    File:Northwestern Arch.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Northwestern_Arch.jpg
+  author:  Rdsmith4
+  license: CC BY-SA 2.5
+  via:     Wikidata image (P18)
+
+Johns Hopkins
+  file:    File:Johns Hopkins' Historic Dome - panoramio.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Johns_Hopkins%27_Historic_Dome_-_panoramio.jpg
+  author:  Art Anderson
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Rice
+  file:    File:Rice University - Sally Port.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Rice_University_-_Sally_Port.JPG
+  author:  Daderot
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Vanderbilt
+  file:    File:Vanderbilt university campus 2017.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Vanderbilt_university_campus_2017.jpg
+  author:  Stablenode
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Notre Dame
+  file:    File:The University of Notre Dame "God Quad".JPG
+  source:  https://commons.wikimedia.org/wiki/File:The_University_of_Notre_Dame_%22God_Quad%22.JPG
+  author:  Michael Fernandes
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Carnegie Mellon
+  file:    File:The Cut, Carnegie Mellon University.jpg
+  source:  https://commons.wikimedia.org/wiki/File:The_Cut,_Carnegie_Mellon_University.jpg
+  author:  Sdkb
+  license: CC BY-SA 4.0
+  via:     override
+
+Georgetown
+  file:    File:Healy Hall Georgetown University.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Healy_Hall_Georgetown_University.jpg
+  author:  APK
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Tufts
+  file:    File:Tufts Bendetson hall.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Tufts_Bendetson_hall.JPG
+  author:  HereToHelp
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Boston College
+  file:    File:Dustbowlsnow.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Dustbowlsnow.jpg
+  author:  unknown
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Northeastern
+  file:    File:Northeastern University.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Northeastern_University.jpg
+  author:  Edward Orde
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18)
+
+Boston University
+  file:    File:BU College of Communication.jpg
+  source:  https://commons.wikimedia.org/wiki/File:BU_College_of_Communication.jpg
+  author:  Fletcher6
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+NYU
+  file:    File:NYU07.JPG
+  source:  https://commons.wikimedia.org/wiki/File:NYU07.JPG
+  author:  Jonathan71
+  license: CC BY-SA 2.5
+  via:     Wikidata image (P18)
+
+Wake Forest
+  file:    File:UpperQuad ACB.jpg
+  source:  https://commons.wikimedia.org/wiki/File:UpperQuad_ACB.jpg
+  author:  Jijithecat at English Wikipedia
+  license: Public domain
+  via:     Wikidata image (P18)
+
+Case Western Reserve
+  file:    File:Case western reserve campus 2005.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Case_western_reserve_campus_2005.jpg
+  author:  Rdikeman at English Wikipedia
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Tulane
+  file:    File:NewcombHallDownsideCenterJan08.jpg
+  source:  https://commons.wikimedia.org/wiki/File:NewcombHallDownsideCenterJan08.jpg
+  author:  Infrogmation of New Orleans
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)
+
+Emory
+  file:    File:Candler School of Theology.JPG
+  source:  https://commons.wikimedia.org/wiki/File:Candler_School_of_Theology.JPG
+  author:  Daniel Mayer
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18)

@@ -599,6 +599,296 @@ window.CAMPUS_PROFILE={
   "townNote": null,
   "nature": 4,
   "beachMiles": 80
+ },
+ "Stanford": {
+  "ratio": 6,
+  "retention": 98,
+  "townName": "Palo Alto",
+  "townPop": 68572,
+  "townPopYear": "2020",
+  "townNote": "own campus beside Palo Alto",
+  "nature": 4,
+  "beachMiles": 30
+ },
+ "Caltech": {
+  "ratio": 3,
+  "retention": 98,
+  "townName": "Pasadena",
+  "townPop": 138699,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 25
+ },
+ "USC": {
+  "ratio": 9,
+  "retention": 97,
+  "townName": "Los Angeles",
+  "townPop": 3898747,
+  "townPopYear": "2020",
+  "townNote": "University Park, south of downtown Los Angeles",
+  "nature": 1,
+  "beachMiles": 12
+ },
+ "Santa Clara": {
+  "ratio": 10,
+  "retention": 94,
+  "townName": "Santa Clara",
+  "townPop": 127647,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 30
+ },
+ "Loyola Marymount": {
+  "ratio": 11,
+  "retention": 88,
+  "townName": "Los Angeles",
+  "townPop": 3898747,
+  "townPopYear": "2020",
+  "townNote": "Westchester bluff above Playa del Rey",
+  "nature": 3,
+  "beachMiles": 2
+ },
+ "University of San Diego": {
+  "ratio": 14,
+  "retention": 90,
+  "townName": "San Diego",
+  "townPop": 1386932,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 4
+ },
+ "Pepperdine": {
+  "ratio": 13,
+  "retention": 86,
+  "townName": "Malibu",
+  "townPop": 10654,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 5,
+  "beachMiles": 1
+ },
+ "Chapman": {
+  "ratio": 12,
+  "retention": 90,
+  "townName": "Orange",
+  "townPop": 139911,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 2,
+  "beachMiles": 12
+ },
+ "University of Portland": {
+  "ratio": 9,
+  "retention": 83,
+  "townName": "Portland",
+  "townPop": 652503,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 80
+ },
+ "Gonzaga": {
+  "ratio": 12,
+  "retention": 94,
+  "townName": "Spokane",
+  "townPop": 228989,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 300
+ },
+ "MIT": {
+  "ratio": 3,
+  "retention": 99,
+  "townName": "Cambridge",
+  "townPop": 118403,
+  "townPopYear": "2020",
+  "townNote": "across the river from Boston",
+  "nature": 1,
+  "beachMiles": 10
+ },
+ "University of Chicago": {
+  "ratio": 5,
+  "retention": 99,
+  "townName": "Chicago",
+  "townPop": 2746388,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 2,
+  "beachMiles": 900
+ },
+ "Duke": {
+  "ratio": 6,
+  "retention": 96,
+  "townName": "Durham",
+  "townPop": 283506,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 5,
+  "beachMiles": 150
+ },
+ "Northwestern": {
+  "ratio": 6,
+  "retention": 97,
+  "townName": "Evanston",
+  "townPop": 78110,
+  "townPopYear": "2020",
+  "townNote": "Evanston, on the lake just north of Chicago",
+  "nature": 3,
+  "beachMiles": 900
+ },
+ "Johns Hopkins": {
+  "ratio": 6,
+  "retention": 98,
+  "townName": "Baltimore",
+  "townPop": 585708,
+  "townPopYear": "2020",
+  "townNote": "Homewood campus, north Baltimore",
+  "nature": 2,
+  "beachMiles": 150
+ },
+ "Rice": {
+  "ratio": 6,
+  "retention": 98,
+  "townName": "Houston",
+  "townPop": 2304580,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 50
+ },
+ "Vanderbilt": {
+  "ratio": 7,
+  "retention": 96,
+  "townName": "Nashville",
+  "townPop": 689447,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 450
+ },
+ "Notre Dame": {
+  "ratio": 9,
+  "retention": 98,
+  "townName": "South Bend",
+  "townPop": 103453,
+  "townPopYear": "2020",
+  "townNote": "own campus just north of South Bend",
+  "nature": 4,
+  "beachMiles": 600
+ },
+ "Carnegie Mellon": {
+  "ratio": 5,
+  "retention": 97,
+  "townName": "Pittsburgh",
+  "townPop": 302971,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 2,
+  "beachMiles": 350
+ },
+ "Georgetown": {
+  "ratio": 11,
+  "retention": 97,
+  "townName": "Washington, D.C.",
+  "townPop": 689545,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 2,
+  "beachMiles": 130
+ },
+ "Tufts": {
+  "ratio": 10,
+  "retention": 96,
+  "townName": "Medford",
+  "townPop": 59659,
+  "townPopYear": "2020",
+  "townNote": "Medford/Somerville line, 5 miles from downtown Boston",
+  "nature": 3,
+  "beachMiles": 12
+ },
+ "Boston College": {
+  "ratio": 13,
+  "retention": 95,
+  "townName": "Newton",
+  "townPop": 88923,
+  "townPopYear": "2020",
+  "townNote": "Chestnut Hill, on the Boston-Newton line",
+  "nature": 3,
+  "beachMiles": 12
+ },
+ "Northeastern": {
+  "ratio": 16,
+  "retention": 98,
+  "townName": "Boston",
+  "townPop": 675647,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 1,
+  "beachMiles": 8
+ },
+ "Boston University": {
+  "ratio": 10,
+  "retention": 95,
+  "townName": "Boston",
+  "townPop": 675647,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 1,
+  "beachMiles": 8
+ },
+ "NYU": {
+  "ratio": 8,
+  "retention": 96,
+  "townName": "New York City",
+  "townPop": 8804190,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 1,
+  "beachMiles": 15
+ },
+ "Wake Forest": {
+  "ratio": 9,
+  "retention": 95,
+  "townName": "Winston-Salem",
+  "townPop": 249545,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 4,
+  "beachMiles": 250
+ },
+ "Case Western Reserve": {
+  "ratio": 9,
+  "retention": 92,
+  "townName": "Cleveland",
+  "townPop": 372624,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 2,
+  "beachMiles": 700
+ },
+ "Tulane": {
+  "ratio": 8,
+  "retention": 94,
+  "townName": "New Orleans",
+  "townPop": 383997,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 70
+ },
+ "Emory": {
+  "ratio": 9,
+  "retention": 96,
+  "townName": "Atlanta",
+  "townPop": 498715,
+  "townPopYear": "2020",
+  "townNote": null,
+  "nature": 3,
+  "beachMiles": 270
  }
 };
 window.CAMPUS_PROFILE_META={

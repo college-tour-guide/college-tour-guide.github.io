@@ -359,6 +359,180 @@ window.CAMPUS_MERIT={
   "avg": 0,
   "programs": null,
   "note": "Reed awards aid on need only, apart from National Merit."
+ },
+ "Stanford": {
+  "pct": 0.1,
+  "avg": 4150,
+  "programs": null,
+  "note": "Need-based only; no academic merit scholarships (athletic aid aside)."
+ },
+ "Caltech": {
+  "pct": 0,
+  "avg": 0,
+  "programs": null,
+  "note": "Need-based only."
+ },
+ "USC": {
+  "pct": 27,
+  "avg": 20312,
+  "programs": "Trustee (full tuition), Presidential (half), Deans (quarter), and Mork scholarships",
+  "note": "Merit is real at USC: over a quarter of no-need freshmen get an award, but the big ones require applying by the December 1 scholarship deadline and an interview."
+ },
+ "Santa Clara": {
+  "pct": 13,
+  "avg": 16788,
+  "programs": "Provost, Dean's, and Johnson Scholars",
+  "note": "Merit goes to the strongest admits automatically; the Johnson Scholars program is full tuition and competitive."
+ },
+ "Loyola Marymount": {
+  "pct": 53,
+  "avg": 10762,
+  "programs": "Trustee, Presidential, and Arrupe scholarships",
+  "note": "More than half of no-need freshmen receive merit, automatically with admission."
+ },
+ "University of San Diego": {
+  "pct": 20,
+  "avg": 23136,
+  "programs": "Presidential, Trustee, and Alcala scholarships",
+  "note": "A fifth of no-need freshmen receive merit averaging over $23,000; considered automatically."
+ },
+ "Pepperdine": {
+  "pct": 32,
+  "avg": 7158,
+  "programs": "Academic and Regents' scholarships",
+  "note": "About a third receive merit, though awards are modest against the sticker price."
+ },
+ "Chapman": {
+  "pct": 18,
+  "avg": 23936,
+  "programs": "Presidential, Chancellor's, and Dean's scholarships",
+  "note": "Merit awards near $24,000 go to roughly one in five no-need freshmen, automatically with admission."
+ },
+ "University of Portland": {
+  "pct": 23,
+  "avg": 29685,
+  "programs": "Presidential and Holy Cross scholarships",
+  "note": "Large automatic merit awards (average near $30,000) make the net price far below sticker for strong students."
+ },
+ "Gonzaga": {
+  "pct": 42,
+  "avg": 22532,
+  "programs": "Dean's, Trustee, and Regents scholarships",
+  "note": "Merit is the norm: over 40% of no-need freshmen get an award averaging $22,500, automatically with admission."
+ },
+ "MIT": {
+  "pct": 0,
+  "avg": 0,
+  "programs": null,
+  "note": "Need-based only; MIT gives no merit scholarships."
+ },
+ "University of Chicago": {
+  "pct": 4,
+  "avg": 16338,
+  "programs": "Dean's and University Scholarships",
+  "note": "A few merit awards; aid is overwhelmingly need-based (and no-loan)."
+ },
+ "Duke": {
+  "pct": 1,
+  "avg": 85600,
+  "programs": "Robertson, A.B. Duke, and Reginaldo Howard Scholars",
+  "note": "A handful of full-ride programs with separate nominations; not a merit school in the ordinary sense."
+ },
+ "Northwestern": {
+  "pct": 1,
+  "avg": 20625,
+  "programs": null,
+  "note": "Essentially need-based only."
+ },
+ "Johns Hopkins": {
+  "pct": 4,
+  "avg": 22347,
+  "programs": "Hodson Trust Scholarship",
+  "note": "A small number of merit awards; aid is need-based and loan-free."
+ },
+ "Rice": {
+  "pct": 4,
+  "avg": 22318,
+  "programs": "Trustee Distinguished Scholarships",
+  "note": "A few merit awards; Rice's strength is generous need-based aid (tuition-free under $75,000 income)."
+ },
+ "Vanderbilt": {
+  "pct": 9,
+  "avg": 29973,
+  "programs": "Cornelius Vanderbilt, Ingram, and Chancellor's Scholarships (full tuition)",
+  "note": "Full-tuition merit for about 9% of no-need freshmen; requires the December 1 scholarship application."
+ },
+ "Notre Dame": {
+  "pct": 2,
+  "avg": 22952,
+  "programs": "Stamps and Notre Dame Scholars",
+  "note": "Very limited merit; aid is need-based."
+ },
+ "Carnegie Mellon": {
+  "pct": 2,
+  "avg": 12949,
+  "programs": null,
+  "note": "Almost entirely need-based."
+ },
+ "Georgetown": {
+  "pct": 0,
+  "avg": 0,
+  "programs": null,
+  "note": "Need-based only."
+ },
+ "Tufts": {
+  "pct": 4,
+  "avg": 45237,
+  "programs": null,
+  "note": "A few large awards; aid is need-based."
+ },
+ "Boston College": {
+  "pct": 2,
+  "avg": 24920,
+  "programs": "Gabelli Presidential Scholars (full tuition)",
+  "note": "A small full-tuition program by separate nomination; otherwise need-based."
+ },
+ "Northeastern": {
+  "pct": 13,
+  "avg": 16112,
+  "programs": "Dean's and merit scholarships",
+  "note": "Merit awards around $16,000 go to about one in eight no-need freshmen, automatically."
+ },
+ "Boston University": {
+  "pct": 8,
+  "avg": 47920,
+  "programs": "Presidential (half tuition) and Trustee (full tuition) Scholarships",
+  "note": "Large but selective merit awards (December 1 deadline); most aid is need-based."
+ },
+ "NYU": {
+  "pct": 1,
+  "avg": 23737,
+  "programs": null,
+  "note": "Essentially need-based only; NYU's aid is also thinner than peers'."
+ },
+ "Wake Forest": {
+  "pct": 2,
+  "avg": 22262,
+  "programs": "Nancy Susan Reynolds and Stamps Scholarships",
+  "note": "A few competitive full-ride awards; otherwise need-based."
+ },
+ "Case Western Reserve": {
+  "pct": 37,
+  "avg": 30499,
+  "programs": "University, Provost, and Michelson-Morley scholarships (up to full tuition)",
+  "note": "One of the most merit-generous research universities: over a third of no-need freshmen get awards averaging $30,000, automatically with admission."
+ },
+ "Tulane": {
+  "pct": 23,
+  "avg": 21264,
+  "programs": "Presidential, Founders, and Dean's Honor scholarships",
+  "note": "Merit awards near $21,000 go to about a quarter of no-need freshmen; the largest require a December 15 application."
+ },
+ "Emory": {
+  "pct": 5,
+  "avg": 38751,
+  "programs": "Emory Scholars (Woodruff, full tuition)",
+  "note": "Competitive Emory Scholars program by school nomination; otherwise need-based."
  }
 };
 window.CAMPUS_MERIT_META={
