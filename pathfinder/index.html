@@ -564,7 +564,7 @@ $('#jump-start').addEventListener('click', () => $('#part1').scrollIntoView({beh
 $('#rail-jump').addEventListener('click', () => $('#results').scrollIntoView({behavior:'smooth'}));
 $('#load-example').addEventListener('click', () => {
   const lean = {R:3.4,I:4.6,A:4.1,S:2.4,E:2.2,C:3.0};
-  state = blank(); state.example = true; state.name = 'Jordan (example)';
+  state = blank(); state.example = true; state.name = 'Jordan';
   ITEMS.forEach((it,i) => state.items[it.id] = Math.max(1, Math.min(5, Math.round(lean[it.t] + ((i*7)%3 - 1)*.6))));
   STRENGTHS.forEach((s,i) => { const t = Object.keys(s.w)[0]; state.strengths[s.id] = Math.max(1, Math.min(5, Math.round(lean[t] - .3 + (i%2)*.5))); });
   state.subjects = ['math','chemphys','cs','art','shop'];
