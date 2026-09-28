@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A 10-minute interest and strengths survey for high school students that suggests college majors and careers.">
+<title>Pathfinder Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --ground:#F2F4F8; --surface:#FFFFFF; --sunk:#E9EDF4; --ink:#161E2E; --muted:#5A6377; --line:#D9DFE9;
+  --accent:#3144C4; --accent-ink:#FFFFFF; --accent-soft:#E3E7FB;
+  --R:#B4552F; --I:#2A6BB0; --A:#8E45AE; --S:#23906A; --E:#C07D08; --C:#566A80;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0F131B; --surface:#171E2B; --sunk:#1F2838; --ink:#E6EAF2; --muted:#9BA4B7; --line:#2B3549;
+    --accent:#8D9BFF; --accent-ink:#0F131B; --accent-soft:#232C4A;
+    --R:#E58A63; --I:#6FA8E8; --A:#C489E0; --S:#5DCB9F; --E:#EDB64A; --C:#9AAEC4;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0F131B; --surface:#171E2B; --sunk:#1F2838; --ink:#E6EAF2; --muted:#9BA4B7; --line:#2B3549;
+  --accent:#8D9BFF; --accent-ink:#0F131B; --accent-soft:#232C4A;
+  --R:#E58A63; --I:#6FA8E8; --A:#C489E0; --S:#5DCB9F; --E:#EDB64A; --C:#9AAEC4;
+}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+*{box-sizing:border-box}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+.progress{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;height:5px;background:var(--sunk)}
+.progress span{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+@media (prefers-reduced-motion:reduce){.progress span{transition:none}}
+
+.wrap{max-width:1180px;margin:0 auto;padding:40px 20px 80px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:start}
+@media (max-width:980px){.wrap{grid-template-columns:minmax(0,1fr)}.rail{display:none}}
+main{display:grid;gap:28px;min-width:0}
+
+.intro{display:grid;gap:18px;padding-bottom:8px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.intro h1{font-size:clamp(34px,6vw,56px);font-weight:800;letter-spacing:-.02em}
+.intro h1 .code{display:inline-flex;gap:2px}
+.lede{font-size:18px;max-width:62ch;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:14px}
+.facts b{color:var(--ink)}
+.intro-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.name-field{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--muted)}
+.name-field input{font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);width:min(280px,100%)}
+
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:9px 16px;border-radius:999px;font-weight:700;font-size:15px}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.warn{border-color:var(--R);color:var(--R)}
+.example-note{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:15px}
+
+section.part{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px clamp(16px,3vw,32px);display:grid;gap:20px}
+.part-head{display:grid;gap:6px}
+.part-head .step{font-family:var(--display);font-weight:700;font-size:14px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.part-head h2{font-size:26px;font-weight:700}
+.part-head p{color:var(--muted);max-width:62ch}
+.count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+.qs{display:grid;gap:0}
+div.q{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 20px;align-items:center}
+div.q:first-child{border-top:0}
+.q-text{display:flex;gap:10px;align-items:baseline}
+.dot{width:9px;height:9px;border-radius:50%;flex:none;transform:translateY(-1px)}
+.scale{display:flex;gap:4px}
+.scale input{position:absolute;opacity:0;pointer-events:none}
+.scale label{display:flex;align-items:center;justify-content:center;min-width:58px;padding:7px 8px;border:1px solid var(--line);border-radius:7px;font-size:13px;color:var(--muted);cursor:pointer;user-select:none;background:var(--ground)}
+.scale label:hover{border-color:var(--accent);color:var(--ink)}
+.scale input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.scale input:focus-visible+label{outline:3px solid var(--accent);outline-offset:2px}
+@media (max-width:720px){
+  div.q{grid-template-columns:minmax(0,1fr)}
+  .scale label{min-width:0;flex:1;padding:8px 2px;font-size:12px}
+}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip label{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:15px;cursor:pointer;background:var(--ground);user-select:none}
+.chip label:hover{border-color:var(--accent)}
+.chip input:checked+label{background:var(--accent-soft);border-color:var(--accent);font-weight:700}
+.chip input:checked+label::before{content:"✓";color:var(--accent)}
+.chip input:focus-visible+label{outline:3px solid var(--accent);outline-offset:2px}
+.chip input:disabled+label{opacity:.45;cursor:not-allowed}
+.sub-h{font-family:var(--display);font-size:18px;font-weight:700}
+.sub-block{display:grid;gap:10px}
+
+.notes{display:grid;gap:16px}
+.notes label{display:grid;gap:6px;font-weight:700}
+.notes span{font-weight:400;color:var(--muted);font-size:14px}
+.notes textarea{font:inherit;font-size:16px;min-height:78px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--ground);color:var(--ink);resize:vertical}
+
+/* rail */
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.rail h3{font-size:16px}
+.rail .live-code{font-family:var(--display);font-size:40px;font-weight:800;letter-spacing:.04em;line-height:1}
+.rail p{font-size:14px;color:var(--muted)}
+.rail .btn{justify-self:start}
+
+/* results */
+#results{background:var(--surface);border:2px solid var(--accent);border-radius:var(--radius);padding:32px clamp(16px,3vw,36px);display:grid;gap:28px}
+.res-top{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:28px;align-items:center}
+@media (max-width:720px){.res-top{grid-template-columns:minmax(0,1fr)}}
+.big-code{font-family:var(--display);font-weight:800;font-size:clamp(56px,11vw,96px);letter-spacing:.02em;line-height:1;display:flex;gap:6px}
+.res-top h2{font-size:28px}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:118px minmax(0,1fr) 34px;gap:10px;align-items:center;font-size:14px}
+.bar .track{height:10px;background:var(--sunk);border-radius:5px;overflow:hidden}
+.bar .fill{height:100%;border-radius:5px}
+.bar .num{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.types{display:grid;gap:18px}
+.type-card{border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:14px;background:var(--ground)}
+.type-card header{display:flex;gap:14px;align-items:center}
+.type-card .letter{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:26px;color:#fff;flex:none}
+.type-card h3{font-size:22px}
+.type-card .nick{color:var(--muted);font-size:14px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:720px){.cols{grid-template-columns:1fr}}
+.cols h4{font-size:15px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-family:var(--body)}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.list li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:15px}
+.edu{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.edu.match{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);font-weight:700}
+.overlap{border-radius:var(--radius);padding:22px;background:var(--accent-soft);display:grid;gap:10px}
+.overlap h3{font-size:20px}
+.overlap ul{margin:0;padding-left:20px;columns:2;column-gap:28px}
+@media (max-width:560px){.overlap ul{columns:1}}
+.next ol{margin:8px 0 0;padding-left:22px;display:grid;gap:8px;max-width:70ch}
+.res-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.copy-out{width:100%;min-height:160px;font:14px/1.5 ui-monospace,Consolas,monospace;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--ground);color:var(--ink)}
+.empty{color:var(--muted);font-size:17px;max-width:60ch}
+.fineprint{font-size:13px;color:var(--muted);max-width:75ch}
+.hex text{font-family:var(--display);font-weight:800}
+</style>
+
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+<div class="wrap">
+<main>
+  <header class="intro">
+    <div class="eyebrow">For high school students</div>
+    <h1>Pathfinder Survey</h1>
+    <p class="lede">Answer honestly about what you enjoy, what you're good at, and what matters to you. At the end you'll get a three-letter interest code, a map of how your interests fit together, and a list of college majors and careers worth a closer look.</p>
+    <div class="facts"><span><b>5 parts</b></span><span><b>About 10 minutes</b></span><span>No wrong answers</span><span>Your answers stay on this device</span></div>
+    <label class="name-field" for="student-name">First name (optional, shows on your results)
+      <input id="student-name" type="text" autocomplete="off" maxlength="40">
+    </label>
+    <div class="intro-actions">
+      <button class="btn primary" type="button" id="jump-start">Start part 1</button>
+      <button class="btn" type="button" id="load-example">See an example first</button>
+    </div>
+    <p class="example-note" id="example-note" hidden>You're looking at example answers from a made-up student. Press <b>Start over</b> at the bottom to clear them and take the survey yourself.</p>
+  </header>
+
+  <section class="part" id="part1" aria-labelledby="p1h">
+    <div class="part-head">
+      <div class="step">Part 1 of 5</div>
+      <h2 id="p1h">Activities you'd enjoy</h2>
+      <p>How would you feel about doing each of these? Don't worry about whether you're good at it yet. Only think about whether it sounds fun.</p>
+      <div class="count" id="c1"></div>
+    </div>
+    <div class="qs" id="items"></div>
+  </section>
+
+  <section class="part" id="part2" aria-labelledby="p2h">
+    <div class="part-head">
+      <div class="step">Part 2 of 5</div>
+      <h2 id="p2h">Your strengths</h2>
+      <p>Rate yourself compared to other people your age. Think about what teachers, coaches, and friends say you're good at.</p>
+      <div class="count" id="c2"></div>
+    </div>
+    <div class="qs" id="strengths"></div>
+  </section>
+
+  <section class="part" id="part3" aria-labelledby="p3h">
+    <div class="part-head">
+      <div class="step">Part 3 of 5</div>
+      <h2 id="p3h">Classes you like</h2>
+      <p>Pick every class or activity you look forward to, even if your grade in it isn't perfect.</p>
+    </div>
+    <div class="chips" id="subjects"></div>
+  </section>
+
+  <section class="part" id="part4" aria-labelledby="p4h">
+    <div class="part-head">
+      <div class="step">Part 4 of 5</div>
+      <h2 id="p4h">What matters to you in a future job</h2>
+    </div>
+    <div class="sub-block">
+      <div class="sub-h">Pick your top three</div>
+      <div class="chips" id="values"></div>
+    </div>
+    <div class="sub-block">
+      <div class="sub-h">After high school, which paths are you open to?</div>
+      <p class="count">Pick as many as you like. Careers that fit these paths get highlighted in your results.</p>
+      <div class="chips" id="edu"></div>
+    </div>
+  </section>
+
+  <section class="part" id="part5" aria-labelledby="p5h">
+    <div class="part-head">
+      <div class="step">Part 5 of 5</div>
+      <h2 id="p5h">A few questions to think about</h2>
+      <p>These don't change your score. They're good starting points for a conversation with a parent, counselor, or mentor, and they get included when you copy your results.</p>
+    </div>
+    <div class="notes" id="notes"></div>
+  </section>
+
+  <section id="results" aria-labelledby="rh" aria-live="polite"></section>
+</main>
+
+<aside class="rail" aria-label="Your progress">
+  <h3>Your shape so far</h3>
+  <div id="rail-hex"></div>
+  <div class="live-code" id="rail-code">&nbsp;</div>
+  <p id="rail-msg"></p>
+  <button class="btn" type="button" id="rail-jump">Go to results</button>
+</aside>
+</div>
+
+<script>
+const ORDER = ['R','I','A','S','E','C'];
+const EDU_LABEL = {cert:'Certificate / apprenticeship', assoc:'2-year degree', bach:'4-year degree', grad:'Grad school'};
+
+const TYPES = {
+  R:{name:'Realistic', nick:'The Builder',
+     desc:'You like hands-on work with real things: tools, machines, plants, animals, or the outdoors. You would rather do something than talk about it, and you like seeing a finished result you made.',
+     majors:['Mechanical or civil engineering','Construction management','Agriculture and animal science','Forestry and natural resources','Aviation','Culinary arts','Fire science','Industrial technology'],
+     careers:[['Electrician','cert'],['HVAC technician','cert'],['Wind turbine technician','cert'],['Aircraft mechanic','cert'],['Chef','cert'],['Firefighter','cert'],['Civil engineering technician','assoc'],['Land surveyor','bach'],['Forester','bach'],['Mechanical engineer','bach']]},
+  I:{name:'Investigative', nick:'The Thinker',
+     desc:'You are curious about how and why things work. You like solving puzzles, digging into research, and working with ideas, numbers, and evidence until something finally makes sense.',
+     majors:['Biology','Chemistry','Physics','Computer science','Mathematics or statistics','Neuroscience','Environmental science','Data science','Economics'],
+     careers:[['Clinical lab technician','assoc'],['Software developer','bach'],['Chemist','bach'],['Environmental scientist','bach'],['Data scientist','bach'],['Physician','grad'],['Pharmacist','grad'],['Economist','grad'],['Research psychologist','grad']]},
+  A:{name:'Artistic', nick:'The Creator',
+     desc:'You like to express ideas in your own way through art, writing, music, performance, or design. You do your best work when there is room to be original and not too many rules.',
+     majors:['Graphic design','Film and media production','Music','Theater','Creative writing','Architecture','Fashion design','Animation','Industrial design'],
+     careers:[['Photographer','cert'],['Sound engineer','cert'],['Video editor','assoc'],['Graphic designer','bach'],['UX designer','bach'],['Writer or editor','bach'],['Animator','bach'],['Game designer','bach'],['Interior designer','bach'],['Architect','bach']]},
+  S:{name:'Social', nick:'The Helper',
+     desc:'You care about people and like to teach, support, heal, or look out for others. Friends probably come to you with their problems, and you feel good when you make someone\'s day better.',
+     majors:['Education','Nursing','Psychology','Social work','Kinesiology and exercise science','Public health','Communication sciences','Human development'],
+     careers:[['EMT or paramedic','cert'],['Registered nurse','assoc'],['Dental hygienist','assoc'],['Teacher','bach'],['Social worker','bach'],['School counselor','grad'],['Physical therapist','grad'],['Occupational therapist','grad'],['Speech-language pathologist','grad']]},
+  E:{name:'Enterprising', nick:'The Persuader',
+     desc:'You like to lead, pitch ideas, compete, and make things happen. You are comfortable taking charge, talking people into a plan, and taking some risks to reach a goal.',
+     majors:['Business administration','Marketing','Finance','Political science','Communications','Hospitality management','Entrepreneurship','Sports management','Pre-law tracks'],
+     careers:[['Real estate agent','cert'],['Small business owner','cert'],['Sales representative','bach'],['Marketing manager','bach'],['Financial advisor','bach'],['Project manager','bach'],['Hotel or restaurant manager','bach'],['Public administrator','bach'],['Lawyer','grad']]},
+  C:{name:'Conventional', nick:'The Organizer',
+     desc:'You like order, accuracy, and clear steps. You are good at keeping track of details, money, and information, and people trust you to get things exactly right.',
+     majors:['Accounting','Supply chain management','Information systems','Actuarial science','Health information management','Paralegal studies','Finance'],
+     careers:[['Bookkeeper','cert'],['Medical records specialist','cert'],['Court reporter','cert'],['Paralegal','assoc'],['Accountant','bach'],['Actuary','bach'],['Logistics analyst','bach'],['Database administrator','bach'],['Budget analyst','bach'],['Insurance underwriter','bach']]}
+};
+
+const COMBOS = {
+  RI:['Mechanical, civil, or aerospace engineering','Robotics','Veterinary medicine','Geology','Environmental engineering','Electrical technology'],
+  RA:['Industrial design','Carpentry and fine woodworking','Landscape architecture','Stage and set design','Culinary arts','Metal fabrication and welding art'],
+  RS:['Athletic training','Physical therapist assistant','Firefighter or EMT','Law enforcement','Coaching','Agricultural extension'],
+  RE:['Construction management','General contractor','Farm or ranch management','Commercial pilot','Real estate development','Outdoor recreation business'],
+  RC:['Quality control inspection','Surveying and GIS technician','CNC machinist','Aviation maintenance','Logistics and warehousing','Drafting and CAD'],
+  IA:['Architecture','Medical illustration','UX research','Game development','Science journalism','Sound and acoustic engineering'],
+  IS:['Medicine (doctor, PA, nurse practitioner)','Psychology','Physical therapy','Public health','Science teaching','Genetic counseling'],
+  IE:['Economics and consulting','Urban and regional planning','Health administration','Biotech startups','Patent law','Environmental policy'],
+  IC:['Data analytics','Actuarial science','Cybersecurity','Software testing','Medical lab science','Statistics'],
+  AS:['Art or music therapy','English, art, or music teaching','Speech-language pathology','Librarianship','Museum education','Counseling'],
+  AE:['Advertising and creative direction','Film and TV production','Journalism and broadcasting','Event design','Fashion merchandising','Public relations'],
+  AC:['Technical writing','Web development','Editing and proofreading','Archives and records','Architectural drafting','Photo and video post-production'],
+  SE:['School administration','Human resources','Nonprofit leadership','Healthcare administration','Public interest law','Politics and community organizing'],
+  SC:['Dental hygiene','Medical assisting','Pharmacy technician','Financial aid and admissions','Library technician','Court and legal support'],
+  EC:['Accounting (CPA)','Financial analysis','Banking','Supply chain management','Real estate appraisal','Insurance']
+};
+
+const ITEMS_BY_TYPE = {
+  R:['Fix a bike, car, or appliance that stopped working','Build something with tools, like furniture, a stage set, or a robot','Work outdoors with plants, animals, or land','Operate equipment like a drone, 3D printer, or tractor','Wire a circuit or install electronics'],
+  I:['Figure out why a science experiment turned out the way it did','Solve tricky math or logic puzzles','Research a question until you really understand it','Learn how the human body or a disease works','Look through data to find a pattern'],
+  A:['Draw, paint, design, or take photos','Write stories, poems, songs, or scripts','Perform by acting, singing, dancing, or playing music','Design how something looks, like clothes, a room, or a game','Film and edit videos'],
+  S:['Tutor or teach a younger student','Help a friend work through a problem','Volunteer for a cause in your community','Coach a team or run an activity for kids','Take care of someone who is sick or hurt'],
+  E:['Start a small business or side hustle','Convince people to support your idea','Run for student government or lead a group project','Negotiate a deal or sell something','Plan an event and be the one in charge'],
+  C:['Keep track of money, a budget, or inventory','Organize files, a schedule, or a messy space','Follow a detailed set of steps to get something exactly right','Work in spreadsheets or databases','Check work for mistakes and fix the details']
+};
+const ITEMS = [];
+for (let i=0;i<5;i++) ORDER.forEach(t => ITEMS.push({id:(t+(i+1)).toLowerCase(), t, q:ITEMS_BY_TYPE[t][i]}));
+const LIKE = ['Nope','Meh','Okay','Like it','Love it'];
+
+const STRENGTHS = [
+  {id:'hands',q:'Working with my hands and figuring out how things fit together',w:{R:1}},
+  {id:'phys',q:'Physical stamina and coordination',w:{R:1,S:.3}},
+  {id:'math',q:'Math and working with numbers',w:{I:1,C:.7}},
+  {id:'sci',q:'Science and logical reasoning',w:{I:1}},
+  {id:'tech',q:'Technology, computers, or coding',w:{I:.8,R:.5,C:.5}},
+  {id:'write',q:'Writing clearly and with style',w:{A:.8,S:.4,E:.3}},
+  {id:'visual',q:'A good eye for art, color, and design',w:{A:1}},
+  {id:'ideas',q:'Coming up with original ideas',w:{A:1,E:.5}},
+  {id:'empathy',q:'Understanding how other people feel',w:{S:1}},
+  {id:'speak',q:'Speaking in front of a group',w:{E:1,S:.4}},
+  {id:'lead',q:'Leading and motivating people',w:{E:1,S:.3}},
+  {id:'organized',q:'Staying organized and meeting deadlines',w:{C:1}},
+  {id:'detail',q:'Catching small details and mistakes',w:{C:1,I:.4}}
+];
+const RATE = ['Not yet','Some','Solid','Strong','Standout'];
+
+const SUBJECTS = [
+  {id:'math',l:'Math',w:['I','C']},{id:'bio',l:'Biology',w:['I','S']},{id:'chemphys',l:'Chemistry or physics',w:['I','R']},
+  {id:'cs',l:'Computer science',w:['I','C']},{id:'eng',l:'English or literature',w:['A','S']},{id:'hist',l:'History or social studies',w:['S','E']},
+  {id:'lang',l:'World languages',w:['S','A']},{id:'art',l:'Art or design',w:['A']},{id:'music',l:'Music or theater',w:['A']},
+  {id:'bus',l:'Business or economics',w:['E','C']},{id:'shop',l:'Shop, tech ed, or engineering',w:['R','I']},{id:'health',l:'Health or PE',w:['R','S']},
+  {id:'ag',l:'Agriculture or environmental science',w:['R','I']},{id:'psych',l:'Psychology',w:['S','I']},{id:'debate',l:'Debate or speech',w:['E','A']},
+  {id:'journal',l:'Journalism or yearbook',w:['A','E']},{id:'fin',l:'Accounting or personal finance',w:['C','E']},{id:'culinary',l:'Culinary or family science',w:['R','S']}
+];
+const VALUES = [
+  {id:'help',l:'Helping people',w:['S']},{id:'create',l:'Being creative',w:['A']},{id:'discover',l:'Discovering new things',w:['I']},
+  {id:'money',l:'Earning a lot of money',w:['E']},{id:'secure',l:'Job security',w:['C']},{id:'handson',l:'Working with my hands',w:['R']},
+  {id:'lead',l:'Being a leader',w:['E']},{id:'indep',l:'Working independently',w:['I','A']},{id:'outdoors',l:'Being outdoors or on the move',w:['R']},
+  {id:'structure',l:'Clear expectations and routine',w:['C']},{id:'community',l:'Making a difference in my community',w:['S','E']},{id:'flex',l:'A flexible schedule',w:['A','E']}
+];
+const EDU = [
+  {id:'cert',l:'Trade school, certificate, or apprenticeship'},{id:'assoc',l:'Community college (2 years)'},{id:'bach',l:'Four-year college'},
+  {id:'grad',l:'Grad or professional school after college'},{id:'mil',l:'Military'},{id:'unsure',l:'Not sure yet'}
+];
+const NOTES = [
+  {id:'flow',q:'When do you lose track of time?',h:'Something you do where an hour feels like ten minutes.'},
+  {id:'askme',q:'What do people ask you for help with?',h:'Homework, tech problems, advice, fixing things, planning?'},
+  {id:'seen',q:'Which job have you seen up close that looked interesting?',h:'A relative, a neighbor, a show, a summer job. What caught your attention?'}
+];
+
+const KEY = 'pathfinder-survey-v1';
+const blank = () => ({name:'', items:{}, strengths:{}, subjects:[], values:[], edu:[], notes:{}, example:false});
+let state = blank();
+try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.items) state = Object.assign(blank(), s); } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function scaleHTML(prefix, id, labels){
+  return '<div class="scale">' + labels.map((l,i) => {
+    const v=i+1, rid=`${prefix}-${id}-${v}`;
+    return `<input type="radio" name="${prefix}-${id}" id="${rid}" value="${v}"><label for="${rid}">${l}</label>`;
+  }).join('') + '</div>';
+}
+function buildForm(){
+  $('#items').innerHTML = ITEMS.map(it =>
+    `<div class="q" role="radiogroup" aria-labelledby="qt-${it.id}"><div class="q-text" id="qt-${it.id}">${esc(it.q)}</div>${scaleHTML('it', it.id, LIKE)}</div>`).join('');
+  $('#strengths').innerHTML = STRENGTHS.map(s =>
+    `<div class="q" role="radiogroup" aria-labelledby="qs-${s.id}"><div class="q-text" id="qs-${s.id}">${esc(s.q)}</div>${scaleHTML('st', s.id, RATE)}</div>`).join('');
+  const chip = (group, o) => `<div class="chip"><input type="checkbox" id="${group}-${o.id}" data-group="${group}" value="${o.id}"><label for="${group}-${o.id}">${esc(o.l)}</label></div>`;
+  $('#subjects').innerHTML = SUBJECTS.map(o => chip('subjects', o)).join('');
+  $('#values').innerHTML = VALUES.map(o => chip('values', o)).join('');
+  $('#edu').innerHTML = EDU.map(o => chip('edu', o)).join('');
+  $('#notes').innerHTML = NOTES.map(n =>
+    `<label for="note-${n.id}">${esc(n.q)}<span>${esc(n.h)}</span><textarea id="note-${n.id}" data-note="${n.id}"></textarea></label>`).join('');
+}
+function syncForm(){
+  document.querySelectorAll('.scale input').forEach(i => i.checked = false);
+  for (const [k,v] of Object.entries(state.items)) { const el = document.getElementById(`it-${k}-${v}`); if (el) el.checked = true; }
+  for (const [k,v] of Object.entries(state.strengths)) { const el = document.getElementById(`st-${k}-${v}`); if (el) el.checked = true; }
+  document.querySelectorAll('.chip input').forEach(i => i.checked = state[i.dataset.group].includes(i.value));
+  document.querySelectorAll('[data-note]').forEach(t => t.value = state.notes[t.dataset.note] || '');
+  $('#student-name').value = state.name || '';
+  $('#example-note').hidden = !state.example;
+  limitValues();
+}
+function limitValues(){
+  const full = state.values.length >= 3;
+  document.querySelectorAll('#values input').forEach(i => i.disabled = full && !i.checked);
+}
+
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.name && t.name.startsWith('it-')) state.items[t.name.slice(3)] = +t.value;
+  else if (t.name && t.name.startsWith('st-')) state.strengths[t.name.slice(3)] = +t.value;
+  else if (t.dataset.group) {
+    const arr = state[t.dataset.group];
+    if (t.checked) { if (!arr.includes(t.value)) arr.push(t.value); } else state[t.dataset.group] = arr.filter(x => x !== t.value);
+    if (t.dataset.group === 'values') limitValues();
+  } else return;
+  save(); update();
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.dataset.note) { state.notes[t.dataset.note] = t.value; save(); }
+  else if (t.id === 'student-name') { state.name = t.value.trim(); save(); update(); }
+});
+
+function score(){
+  const out = {}, parts = {};
+  ORDER.forEach(t => {
+    const its = ITEMS.filter(i => i.t === t && state.items[i.id]);
+    const interest = its.length ? its.reduce((a,i) => a + (state.items[i.id]-1)/4, 0) / its.length : null;
+    let sw=0, sv=0;
+    STRENGTHS.forEach(s => { if (s.w[t] && state.strengths[s.id]) { sw += s.w[t]; sv += s.w[t]*(state.strengths[s.id]-1)/4; } });
+    const strength = sw ? sv/sw : null;
+    const subj = state.subjects.length ? Math.min(1, SUBJECTS.filter(s => state.subjects.includes(s.id) && s.w.includes(t)).length / 3) : null;
+    const val = state.values.length ? Math.min(1, VALUES.filter(v => state.values.includes(v.id) && v.w.includes(t)).length / 2) : null;
+    parts[t] = {interest, strength, subj, val};
+  });
+  const W = {interest:.55, strength:.25, subj:.12, val:.08};
+  ORDER.forEach(t => {
+    let tw=0, tv=0;
+    for (const k in W) if (parts[t][k] !== null) { tw += W[k]; tv += W[k]*parts[t][k]; }
+    out[t] = tw ? Math.round(100*tv/tw) : 0;
+  });
+  const ranked = ORDER.slice().sort((a,b) => out[b]-out[a] || ORDER.indexOf(a)-ORDER.indexOf(b));
+  return {scores:out, ranked};
+}
+
+function hexSVG(scores, size, labels){
+  const c = size/2, R = size/2 - (labels ? 30 : 16);
+  const pt = (i, r) => { const a = (-90 + 60*i) * Math.PI/180; return [c + r*Math.cos(a), c + r*Math.sin(a)]; };
+  const ring = f => ORDER.map((_,i) => pt(i, R*f).map(n => n.toFixed(1)).join(',')).join(' ');
+  let s = `<svg class="hex" viewBox="0 0 ${size} ${size}" width="100%" role="img" aria-label="Hexagon of interest scores: ${ORDER.map(t => TYPES[t].name+' '+scores[t]).join(', ')}">`;
+  [1,.75,.5,.25].forEach(f => s += `<polygon points="${ring(f)}" style="fill:${f===1?'var(--ground)':'none'};stroke:var(--line);stroke-width:1"/>`);
+  ORDER.forEach((_,i) => { const [x,y] = pt(i,R); s += `<line x1="${c}" y1="${c}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" style="stroke:var(--line);stroke-width:1"/>`; });
+  const poly = ORDER.map((t,i) => pt(i, R*Math.max(.04, scores[t]/100)).map(n => n.toFixed(1)).join(',')).join(' ');
+  s += `<polygon points="${poly}" style="fill:var(--accent);fill-opacity:.18;stroke:var(--accent);stroke-width:2;stroke-linejoin:round"/>`;
+  ORDER.forEach((t,i) => {
+    const [x,y] = pt(i, R*Math.max(.04, scores[t]/100));
+    s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${labels?5:4}" style="fill:var(--${t});stroke:var(--surface);stroke-width:1.5"/>`;
+    const [lx,ly] = pt(i, R + (labels ? 18 : 10));
+    s += `<text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" dominant-baseline="central" style="fill:var(--${t});font-size:${labels?18:13}px">${t}</text>`;
+  });
+  return s + '</svg>';
+}
+
+const codeHTML = ranked => ranked.slice(0,3).map(t => `<span style="color:var(--${t})">${t}</span>`).join('');
+
+function update(){
+  const answered = Object.keys(state.items).length, sAns = Object.keys(state.strengths).length;
+  const total = ITEMS.length + STRENGTHS.length + 3;
+  const done = answered + sAns + (state.subjects.length?1:0) + (state.values.length?1:0) + (state.edu.length?1:0);
+  $('#bar').style.width = (100*done/total) + '%';
+  $('#c1').textContent = `${answered} of ${ITEMS.length} answered`;
+  $('#c2').textContent = `${sAns} of ${STRENGTHS.length} answered`;
+
+  const {scores, ranked} = score();
+  const ready = answered >= 12;
+  $('#rail-hex').innerHTML = hexSVG(scores, 220, false);
+  $('#rail-code').innerHTML = ready ? codeHTML(ranked) : '&nbsp;';
+  $('#rail-msg').textContent = ready ? 'Your code will keep shifting as you answer. Finish all five parts for the most accurate picture.'
+    : `Answer ${12-answered} more in Part 1 to see your code.`;
+  renderResults(scores, ranked, ready, answered);
+}
+
+function renderResults(scores, ranked, ready, answered){
+  const el = $('#results');
+  if (!ready){
+    el.innerHTML = `<div class="part-head"><div class="step">Your results</div><h2 id="rh">Your results show up here</h2></div>
+      <p class="empty">Answer at least 12 questions in Part 1 and your results will start filling in. You've answered ${answered} so far.</p>`;
+    return;
+  }
+  const top = ranked.slice(0,3);
+  const who = state.name ? `${esc(state.name)}'s` : 'Your';
+  const pair = ORDER.filter(t => top.slice(0,2).includes(t)).join('');
+  const edu = state.edu.filter(e => EDU_LABEL[e]);
+  const valLabels = VALUES.filter(v => state.values.includes(v.id)).map(v => v.l);
+
+  const typeCard = t => {
+    const T = TYPES[t];
+    const careers = T.careers.slice().sort((a,b) => (edu.includes(b[1])?1:0) - (edu.includes(a[1])?1:0));
+    return `<article class="type-card">
+      <header><div class="letter" style="background:var(--${t})">${t}</div><div><h3>${T.name}</h3><div class="nick">${T.nick} · score ${scores[t]}</div></div></header>
+      <p>${T.desc}</p>
+      <div class="cols">
+        <div><h4>Majors to explore</h4><ul class="list">${T.majors.map(m => `<li>${m}</li>`).join('')}</ul></div>
+        <div><h4>Careers to look into</h4><ul class="list">${careers.map(([n,e]) => `<li><span>${n}</span><span class="edu${edu.includes(e)?' match':''}">${EDU_LABEL[e]}</span></li>`).join('')}</ul></div>
+      </div>
+    </article>`;
+  };
+
+  el.innerHTML = `
+    <div class="res-top">
+      <div style="display:grid;gap:14px">
+        <div class="step" style="font-family:var(--display);font-weight:700;font-size:14px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase">${who} results</div>
+        <div class="big-code" aria-label="Interest code ${top.join('')}">${codeHTML(ranked)}</div>
+        <h2 id="rh">${top.map(t => TYPES[t].nick.replace('The ','')).join(' · ')}</h2>
+        <p style="max-width:58ch">Your code is your top three interest areas in order. Neighbors on the hexagon (like R and I, or S and E) have a lot in common, while opposite corners (like R and S) are quite different. A lopsided shape means you have clear favorites. A rounder shape means you're flexible and many paths could fit.</p>
+      </div>
+      <div>${hexSVG(scores, 260, true)}</div>
+    </div>
+    <div class="bars">${ranked.map(t => `<div class="bar"><span>${TYPES[t].name}</span><div class="track"><div class="fill" style="width:${scores[t]}%;background:var(--${t})"></div></div><span class="num">${scores[t]}</span></div>`).join('')}</div>
+    <div class="overlap">
+      <h3>Where your top two overlap: ${TYPES[top[0]].name} + ${TYPES[top[1]].name}</h3>
+      <p>These fields tend to attract people who enjoy both. They're often the best place to start looking.</p>
+      <ul>${COMBOS[pair].map(c => `<li>${c}</li>`).join('')}</ul>
+    </div>
+    <div class="types">${top.map(typeCard).join('')}</div>
+    ${valLabels.length ? `<div class="sub-block"><div class="sub-h">What you said matters most</div><p>${valLabels.join(', ')}. When you research a career, check whether it offers these. Two jobs in the same field can feel very different on these points.</p></div>` : ''}
+    ${state.edu.includes('mil') ? `<p>You said you're open to the military. Many of the careers above, especially technical and medical ones, have matching military jobs that come with paid training and money for college later.</p>` : ''}
+    <div class="next">
+      <div class="sub-h">Next steps</div>
+      <ol>
+        <li>Pick two or three careers from your results and look them up in the <a href="https://www.bls.gov/ooh/" target="_blank" rel="noopener">Occupational Outlook Handbook</a> to see pay, job growth, and the training each one needs.</li>
+        <li>Take the free <a href="https://www.mynextmove.org/explore/ip" target="_blank" rel="noopener">O*NET Interest Profiler</a> from the U.S. Department of Labor. It uses the same six interest areas with a longer, tested question set, so it's a good check on this survey.</li>
+        <li>Talk to someone who does one of these jobs. Ask what a normal day looks like and what they wish they'd known in high school.</li>
+        <li>Try it out: an elective, a club, a summer program, a job shadow day, or a part-time job close to one of your top areas.</li>
+        <li>Bring your results to your school counselor when you plan next year's classes or start your college list.</li>
+      </ol>
+    </div>
+    <div class="res-actions">
+      <button class="btn primary" type="button" id="copy-btn">Copy my results</button>
+      <button class="btn warn" type="button" id="reset-btn">Start over</button>
+      <span class="count" id="copy-msg" role="status"></span>
+    </div>
+    <textarea class="copy-out" id="copy-out" readonly hidden aria-label="Results text"></textarea>
+    <p class="fineprint">This survey is based on John Holland's six interest types (RIASEC), the framework most school counselors and career centers use. It's a starting point for exploring, not a test you pass or fail, and it can't tell you what you'll be good at. Interests often change during high school and college, so it's worth taking again next year.</p>`;
+}
+
+function summaryText(){
+  const {scores, ranked} = score();
+  const top = ranked.slice(0,3);
+  const pair = ORDER.filter(t => top.slice(0,2).includes(t)).join('');
+  const L = [];
+  L.push(`PATHFINDER SURVEY RESULTS${state.name ? ' for ' + state.name : ''}`);
+  L.push(`Interest code: ${top.join('')} (${top.map(t => TYPES[t].name).join(', ')})`, '');
+  L.push('Scores (0-100):'); ranked.forEach(t => L.push(`  ${TYPES[t].name}: ${scores[t]}`));
+  L.push('', `Where my top two overlap: ${COMBOS[pair].join('; ')}`);
+  top.forEach(t => { L.push('', `${TYPES[t].name} (${TYPES[t].nick})`, `  Majors: ${TYPES[t].majors.join('; ')}`, `  Careers: ${TYPES[t].careers.map(c => c[0]).join('; ')}`); });
+  const subj = SUBJECTS.filter(s => state.subjects.includes(s.id)).map(s => s.l);
+  if (subj.length) L.push('', `Favorite classes: ${subj.join(', ')}`);
+  const vals = VALUES.filter(v => state.values.includes(v.id)).map(v => v.l);
+  if (vals.length) L.push(`What matters most: ${vals.join(', ')}`);
+  const edu = EDU.filter(e => state.edu.includes(e.id)).map(e => e.l);
+  if (edu.length) L.push(`Open to: ${edu.join(', ')}`);
+  NOTES.forEach(n => { const v = (state.notes[n.id]||'').trim(); if (v) L.push('', n.q, '  ' + v); });
+  return L.join('\n');
+}
+
+$('#results').addEventListener('click', e => {
+  if (e.target.id === 'copy-btn'){
+    const txt = summaryText(), out = $('#copy-out'), msg = $('#copy-msg');
+    out.value = txt;
+    const fallback = () => { out.hidden = false; out.focus(); out.select(); msg.textContent = 'Select all of the text below and copy it.'; };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(() => { msg.textContent = 'Copied. Paste it into an email or a note.'; }).catch(fallback);
+    } else fallback();
+  }
+  if (e.target.id === 'reset-btn'){
+    const b = e.target;
+    if (b.dataset.armed){
+      state = blank(); save(); syncForm(); update();
+      $('#part1').scrollIntoView({behavior:'smooth'});
+    } else {
+      b.dataset.armed = '1'; b.textContent = 'Press again to erase all answers';
+      setTimeout(() => { if (b.isConnected){ delete b.dataset.armed; b.textContent = 'Start over'; } }, 4000);
+    }
+  }
+});
+
+$('#jump-start').addEventListener('click', () => $('#part1').scrollIntoView({behavior:'smooth'}));
+$('#rail-jump').addEventListener('click', () => $('#results').scrollIntoView({behavior:'smooth'}));
+$('#load-example').addEventListener('click', () => {
+  const lean = {R:3.4,I:4.6,A:4.1,S:2.4,E:2.2,C:3.0};
+  state = blank(); state.example = true; state.name = 'Jordan (example)';
+  ITEMS.forEach((it,i) => state.items[it.id] = Math.max(1, Math.min(5, Math.round(lean[it.t] + ((i*7)%3 - 1)*.6))));
+  STRENGTHS.forEach((s,i) => { const t = Object.keys(s.w)[0]; state.strengths[s.id] = Math.max(1, Math.min(5, Math.round(lean[t] - .3 + (i%2)*.5))); });
+  state.subjects = ['math','chemphys','cs','art','shop'];
+  state.values = ['discover','create','indep'];
+  state.edu = ['bach','grad'];
+  state.notes = {flow:'Building levels in a game editor, or taking apart old electronics.', askme:'Fixing laptops and explaining math homework.', seen:'My aunt is an architect and I liked seeing her models.'};
+  save(); syncForm(); update();
+  $('#results').scrollIntoView({behavior:'smooth'});
+});
+
+buildForm(); syncForm(); update();
+</script>
+</body>
+</html>

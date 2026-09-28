@@ -12,3 +12,10 @@ The map needs an internet connection; everything else works offline.
 Data sources: U.S. Department of Education College Scorecard and IPEDS, UC Admissions,
 each school's Common Data Set (merit aid), U.S. News 2026 rankings, and the schools'
 own admissions pages, as of September 2026. See the notes at the bottom of the page.
+
+Pathfinder Survey (pathfinder/index.html)
+------------------------------------------
+A 10-minute interest and strengths survey for high school students, based on Holland's
+six interest types (RIASEC). It gives a three-letter interest code, a hexagon profile, and
+matching majors and careers. Answers stay in the student's own browser.
+Live at https://college-tour-guide.github.io/pathfinder/
