@@ -113,6 +113,10 @@ div.q:first-child{border-top:0}
 .rail .live-code{font-family:var(--display);font-size:40px;font-weight:800;letter-spacing:.04em;line-height:1}
 .rail p{font-size:14px;color:var(--muted)}
 .rail .btn{justify-self:start}
+.legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+.legend li{display:grid;grid-template-columns:18px 1fr;column-gap:4px;font-size:13px;line-height:1.25}
+.legend b{font-family:var(--display);font-weight:800;font-size:15px;grid-row:span 2}
+.legend span{color:var(--muted);font-size:12px}
 
 /* results */
 #results{background:var(--surface);border:2px solid var(--accent);border-radius:var(--radius);padding:32px clamp(16px,3vw,36px);display:grid;gap:28px}
@@ -231,6 +235,7 @@ div.q:first-child{border-top:0}
 
 <aside class="rail" aria-label="Your progress">
   <h3>Your shape so far</h3>
+  <ul class="legend" id="rail-legend" aria-label="What the letters mean"></ul>
   <div id="rail-hex"></div>
   <div class="live-code" id="rail-code">&nbsp;</div>
   <p id="rail-msg"></p>
@@ -578,6 +583,7 @@ $('#load-example').addEventListener('click', () => {
   $('#results').scrollIntoView({behavior:'smooth'});
 });
 
+$('#rail-legend').innerHTML = ORDER.map(t => `<li><b style="color:var(--${t})">${t}</b>${TYPES[t].name}<span>${TYPES[t].nick.replace('The ','')}</span></li>`).join('');
 buildForm(); syncForm(); update();
 </script>
 </body>
