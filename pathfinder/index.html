@@ -195,7 +195,7 @@ div.q:first-child{border-top:0}
       <div class="saved-head"><span class="sub-h" id="saved-h">Saved surveys</span><span class="msg">Kept in this browser on this device, so a family can share one computer.</span></div>
       <div class="saved-actions">
         <button class="btn primary small" type="button" id="save-btn">Save survey</button>
-        <button class="btn small" type="button" id="new-btn">New survey</button>
+        <button class="btn small" type="button" id="clear-btn">Clear form</button>
         <span class="msg" id="save-status" role="status"></span>
       </div>
       <ul class="saved-list" id="saved-list"></ul>
@@ -204,7 +204,7 @@ div.q:first-child{border-top:0}
       <button class="btn primary" type="button" id="jump-start">Start part 1</button>
       <button class="btn" type="button" id="load-example">See an example first</button>
     </div>
-    <p class="example-note" id="example-note" hidden>You're looking at example answers from a made-up student. Press <b>Start over</b> at the bottom to clear them and take the survey yourself.</p>
+    <p class="example-note" id="example-note" hidden>You're looking at example answers from a made-up student. Press <b>Clear form</b> to clear them and take the survey yourself.</p>
   </header>
 
   <section class="part" id="part1" aria-labelledby="p1h">
@@ -407,9 +407,19 @@ function unsaved(){ return !state.example && !state.savedAs && hasAnswers(state)
 function save(){
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
   if (state.savedAs && saved[state.savedAs]) {
-    saved[state.savedAs] = {name: state.name || saved[state.savedAs].name, at: Date.now(), state: clone(state)};
+    const nk = (state.name || '').toLowerCase();
+    if (nk && nk !== state.savedAs && !saved[nk]) { saved[nk] = saved[state.savedAs]; delete saved[state.savedAs]; state.savedAs = nk; }
+    const label = nk && nk === state.savedAs ? state.name : saved[state.savedAs].name;
+    saved[state.savedAs] = {name: label, at: Date.now(), state: clone(state)};
     persistSaved();
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
   }
+}
+// Empty the form. A saved survey that was open stays exactly as it was last saved.
+function clearForm(){
+  const was = state.savedAs && saved[state.savedAs] ? saved[state.savedAs].name : '';
+  state = blank(); save(); syncForm(); update();
+  note(was ? `Form cleared. ${was}'s saved survey wasn't changed.` : 'Form cleared.');
 }
 
 const $ = s => document.querySelector(s);
@@ -646,7 +656,7 @@ function renderResults(scores, ranked, ready, answered){
     </div>
     <div class="res-actions">
       <button class="btn primary" type="button" id="copy-btn">Copy my results</button>
-      <button class="btn warn" type="button" id="reset-btn">Start over</button>
+      <button class="btn warn" type="button" id="reset-btn">Clear form</button>
       <span class="count" id="copy-msg" role="status"></span>
     </div>
     <textarea class="copy-out" id="copy-out" readonly hidden aria-label="Results text"></textarea>
@@ -686,13 +696,10 @@ $('#results').addEventListener('click', e => {
   }
   if (e.target.id === 'reset-btn'){
     const b = e.target;
-    if (b.dataset.armed){
-      state = blank(); save(); syncForm(); update();
-      $('#part1').scrollIntoView({behavior:'smooth'});
-    } else {
-      b.dataset.armed = '1'; b.textContent = 'Press again to erase all answers';
-      setTimeout(() => { if (b.isConnected){ delete b.dataset.armed; b.textContent = 'Start over'; } }, 4000);
-    }
+    if (b.dataset.armed || !unsaved()){
+      clearForm();
+      document.querySelector('.intro').scrollIntoView({behavior:'smooth'});
+    } else arm(b, 'Your answers aren’t saved. Press again to clear them', 'Clear form');
   }
 });
 
@@ -724,13 +731,13 @@ function renderSaved(){
     const p = saved[id], now = state.savedAs === id;
     const code = Object.keys(p.state.items).length >= 12 ? score(p.state).ranked.slice(0,3).join('') : '';
     const when = new Date(p.at).toLocaleDateString(undefined, {month:'short', day:'numeric'});
-    return `<li><span class="who"><b>${esc(p.name)}</b><span class="msg">${code ? `<span class="code">${code}</span> · ` : ''}Saved ${when}${now ? ' · open now' : ''}</span></span>`
-      + (now ? '' : `<button class="btn small" type="button" data-open="${esc(id)}">Open</button>`)
+    return `<li><span class="who"><b>${esc(p.name)}</b><span class="msg">${code ? `<span class="code">${code}</span> · ` : ''}Saved ${when}${now ? ' · editing now' : ''}</span></span>`
+      + (now ? '' : `<button class="btn small" type="button" data-open="${esc(id)}">Edit</button>`)
       + `<button class="btn small warn" type="button" data-del="${esc(id)}">Delete</button></li>`;
   }).join('') : '<li class="msg">No saved surveys yet. Type a name above and press Save survey.</li>';
   const s = $('#save-status');
   if (!s.dataset.hold)
-    s.textContent = state.savedAs ? `Saved as ${saved[state.savedAs].name}. Changes save automatically.` : (unsaved() ? 'Not saved yet.' : '');
+    s.textContent = state.savedAs ? `Editing ${saved[state.savedAs].name}'s survey. Changes save automatically.` : (unsaved() ? 'Not saved yet.' : '');
 }
 function note(msg){ const s = $('#save-status'); s.textContent = msg; s.dataset.hold = '1'; clearTimeout(note.t); note.t = setTimeout(() => { delete s.dataset.hold; renderSaved(); }, 3500); }
 $('#save-btn').addEventListener('click', e => {
@@ -744,20 +751,20 @@ $('#save-btn').addEventListener('click', e => {
   saved[id] = {name, at: Date.now(), state: clone(state)};
   persistSaved(); save(); syncForm(); update(); note(`Saved ${name}'s survey.`);
 });
-$('#new-btn').addEventListener('click', e => {
+$('#clear-btn').addEventListener('click', e => {
   const b = e.currentTarget;
-  if (unsaved() && !b.dataset.armed){ arm(b, 'Your answers aren’t saved. Press again to clear them', 'New survey'); return; }
-  b.textContent = 'New survey'; delete b.dataset.armed;
-  state = blank(); save(); syncForm(); update(); $('#student-name').focus();
-  note('Started a new survey. Type a name, then answer the questions.');
+  if (unsaved() && !b.dataset.armed){ arm(b, 'Your answers aren’t saved. Press again to clear them', 'Clear form'); return; }
+  b.textContent = 'Clear form'; delete b.dataset.armed;
+  clearForm(); $('#student-name').focus();
 });
 $('#saved-list').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   if (b.dataset.open){
     const id = b.dataset.open;
-    if (unsaved() && !b.dataset.armed){ arm(b, 'Current answers aren’t saved. Open anyway?', 'Open'); return; }
+    if (unsaved() && !b.dataset.armed){ arm(b, 'Current answers aren’t saved. Edit anyway?', 'Edit'); return; }
     state = Object.assign(blank(), clone(saved[id].state), {savedAs: id, example: false});
-    save(); syncForm(); update(); note(`Opened ${saved[id].name}'s survey.`);
+    save(); syncForm(); update(); note(`Editing ${saved[id].name}'s survey. Changes save automatically.`);
+    document.querySelector('#part1').scrollIntoView({behavior:'smooth'});
   } else if (b.dataset.del){
     const id = b.dataset.del;
     if (!b.dataset.armed){ arm(b, 'Press again to delete', 'Delete'); return; }
