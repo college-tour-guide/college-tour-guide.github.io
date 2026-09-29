@@ -77,6 +77,21 @@ main{display:grid;gap:28px;min-width:0}
 .mentioned{display:grid;gap:10px;border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--ground)}
 .mentioned .list{gap:10px}
 .tchip{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:5px;color:#fff;font:800 12px/1 var(--display);margin-right:3px;vertical-align:1px}
+.sq{padding:14px 0;border-top:1px solid var(--line);display:grid;gap:8px}
+.sq:first-child{border-top:0}
+.bipolar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:center}
+.pole{font-size:14px;color:var(--muted);line-height:1.3}
+.pole.lo{text-align:right}
+.scale.dots{gap:6px}
+.scale.dots label{min-width:0;width:34px;height:34px;border-radius:50%;padding:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:560px){
+  .bipolar{grid-template-columns:1fr 1fr;grid-template-areas:"lo hi" "dots dots"}
+  .pole.lo{grid-area:lo;text-align:left}.pole.hi{grid-area:hi;text-align:right}
+  .bipolar .scale{grid-area:dots;justify-content:space-between}
+}
+.c-meta.heads{color:var(--R)}
+.c-meta.fits{color:var(--S)}
 .example-note{background:var(--accent-soft);border-radius:8px;padding:10px 14px;font-size:15px}
 
 section.part{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px clamp(16px,3vw,32px);display:grid;gap:20px}
@@ -187,7 +202,7 @@ div.q:first-child{border-top:0}
     <div class="eyebrow">For high school students</div>
     <h1>Pathfinder Survey</h1>
     <p class="lede">Answer honestly about what you enjoy, what you're good at, and what matters to you. At the end you'll get a three-letter interest code, a map of how your interests fit together, and a list of college majors and careers worth a closer look.</p>
-    <div class="facts"><span><b>5 parts</b></span><span><b>About 10 minutes</b></span><span>No wrong answers</span><span>Your answers stay on this device</span></div>
+    <div class="facts"><span><b>5 parts</b></span><span><b>About 12 minutes</b></span><span>No wrong answers</span><span>Your answers stay on this device</span></div>
     <label class="name-field" for="student-name">Name (shows on your results, and needed to save your survey)
       <input id="student-name" type="text" autocomplete="off" maxlength="40">
     </label>
@@ -249,6 +264,11 @@ div.q:first-child{border-top:0}
       <div class="sub-h">After high school, which paths are you open to?</div>
       <p class="count">Pick as many as you like. Careers that fit these paths get highlighted in your results.</p>
       <div class="chips" id="edu"></div>
+    </div>
+    <div class="sub-block">
+      <div class="sub-h">How do you like to work?</div>
+      <p class="count">Pick a spot between the two answers. The middle dot means no preference. These don't change your interest code; they flag careers that fit how you like to work, and ones with a catch.</p>
+      <div id="style-qs"></div>
     </div>
   </section>
 
@@ -391,8 +411,47 @@ const NOTES = [
   {id:'seen',q:'Which job have you seen up close that looked interesting?',h:'A relative, a neighbor, a show, a summer job. What caught your attention?'}
 ];
 
+// Work setting and style. Each career's profile is O*NET 30.0 Work Context, 0-100 per dimension in SDIM order
+// (raw frequency or share, stretched across all occupations). EMT/paramedic, medical records and accountant
+// borrow O*NET 24.3 where 30.0 has no data; UX designer borrows web developers.
+const SDIM = ['out','move','people','sched','pace','free','risk','hours'];
+const STYLE = {"Electrician":[78,81,90,34,69,81,90,35],"HVAC technician":[76,76,84,43,65,73,65,35],"Wind turbine technician":[94,71,86,52,89,69,98,60],"Aircraft mechanic":[75,63,77,4,62,61,72,24],"Chef":[24,83,83,44,70,50,58,79],"Firefighter":[87,64,89,27,71,60,77,66],"Civil engineering technician":[63,33,81,19,40,59,22,15],"Land surveyor":[86,48,73,58,71,62,25,45],"Forester":[76,52,77,33,49,86,18,30],"Mechanical engineer":[24,30,89,2,51,72,19,45],"Clinical lab technician":[1,50,80,12,73,65,85,13],"Software developer":[0,1,54,2,47,72,1,8],"Chemist":[3,48,51,7,62,79,66,31],"Environmental scientist":[38,15,61,4,49,51,30,11],"Data scientist":[1,5,50,10,48,61,3,32],"Physician":[3,44,90,16,77,90,87,58],"Pharmacist":[1,82,96,3,97,84,86,24],"Economist":[2,7,38,13,43,85,3,88],"Urban and regional planner":[31,23,60,25,35,54,2,46],"Research psychologist":[1,10,63,4,55,91,48,84],"Photographer":[57,43,77,86,46,67,8,48],"Sound engineer":[24,18,62,100,56,71,12,72],"Video editor":[27,11,63,3,63,64,2,38],"Graphic designer":[9,5,69,37,53,66,2,55],"UX designer":[1,5,54,26,57,78,1,62],"Writer or editor":[30,15,95,11,52,45,0,59],"Animator":[15,11,61,57,68,72,4,60],"Game designer":[4,4,61,26,46,60,0,100],"Interior designer":[20,23,80,50,50,58,7,52],"Architect":[41,15,82,25,56,57,9,85],"EMT or paramedic":[96,53,83,20,82,83,89,69],"Registered nurse":[1,52,95,13,73,66,81,25],"Dental hygienist":[0,23,99,0,60,61,99,4],"Teacher":[28,51,91,0,36,72,37,56],"Social worker":[30,31,94,13,63,76,46,39],"School counselor":[8,18,95,1,54,62,30,40],"Physical therapist":[9,67,98,13,74,91,67,11],"Occupational therapist":[22,55,93,15,56,78,80,41],"Speech-language pathologist":[9,28,100,10,71,85,62,20],"Real estate agent":[58,45,98,90,73,84,4,76],"Sales representative":[44,42,100,12,38,81,2,66],"Marketing manager":[9,16,84,25,58,78,2,81],"Financial advisor":[2,15,56,4,55,62,1,54],"Project manager":[null,null,null,null,null,null,null,null],"Hotel or restaurant manager":[18,59,94,21,58,76,5,50],"Lawyer":[5,11,90,0,74,88,2,66],"Bookkeeper":[10,13,79,0,48,53,4,15],"Medical records specialist":[0,16,56,0,40,57,24,11],"Court reporter":[0,5,92,30,54,70,9,28],"Paralegal":[7,6,81,6,63,67,3,37],"Accountant":[7,12,81,6,58,64,2,39],"Actuary":[0,2,50,7,41,57,0,57],"Logistics analyst":[28,27,81,17,59,64,19,75],"Database administrator":[3,17,64,8,57,81,1,16],"Budget analyst":[4,4,76,0,60,72,9,40],"Insurance underwriter":[5,2,79,4,66,73,1,33],"Airline pilot":[60,6,77,76,88,75,44,20],"Air traffic controller":[3,14,88,26,68,73,7,12],"Physician assistant":[6,46,97,20,87,90,93,68]};
+const STYLEQ = [
+  {id:'out', q:'Where would you rather work?', lo:'Indoors', hi:'Outdoors', kind:'both', hiTxt:'often outdoors', loTxt:'mostly indoors'},
+  {id:'move', q:'How do you like to spend your day?', lo:'Sitting at a desk', hi:'On my feet, moving around', kind:'both', hiTxt:'on your feet a lot', loTxt:'mostly sitting'},
+  {id:'people', q:'How much time with other people?', lo:'Mostly on my own', hi:'With people all day', kind:'both', hiAt:85, hiTxt:'people all day', loTxt:'lots of solo work'},
+  {id:'free', q:'How do you like to get work done?', lo:'Clear instructions to follow', hi:'Figure it out my own way', kind:'both', hiAt:85, hiTxt:'lots of independence', loTxt:'set procedures'},
+  {id:'sched', q:'What kind of schedule?', lo:'Regular daytime hours', hi:'Nights, weekends, or shifts are fine', kind:'tol', hiTxt:'nights, weekends, or shifts'},
+  {id:'hours', q:'How many hours a week?', lo:'About 40, then I’m done', hi:'Long hours are fine for the right job', kind:'tol', hiTxt:'often over 40 hours a week'},
+  {id:'pace', q:'What pace do you like?', lo:'Calm and steady', hi:'Fast-paced, high stakes', kind:'tol', hiTxt:'high-pressure moments'},
+  {id:'risk', q:'How do you feel about some physical risk?', lo:'Keep me safe and clean', hi:'Some danger, dirt, or germs is fine', kind:'tol', hiTxt:'some danger or germs'}
+];
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+// Compare one career with the answers: fit 0-1, plus plain-language catches and matches.
+function styleCheck(n, st = state){
+  const prof = STYLE[n]; if (!prof) return null;
+  const warn = [], match = []; let miss = 0, cnt = 0;
+  STYLEQ.forEach(sq => {
+    const a = st.style[sq.id], j = prof[SDIM.indexOf(sq.id)];
+    if (!a || j == null) return;
+    const p = (a - 1) * 25, hiAt = sq.hiAt || 65; cnt++;
+    miss += sq.kind === 'both' ? Math.abs(j - p) : Math.max(0, j - p);
+    if (sq.kind === 'tol'){ if (a <= 2 && j >= 60) warn.push(sq.hiTxt); return; }
+    if (a <= 2 && j >= hiAt) warn.push(sq.hiTxt);
+    else if (a >= 4 && j <= 30) warn.push(sq.loTxt);
+    else if (a >= 4 && j >= hiAt) match.push(sq.hiTxt);
+    else if (a <= 2 && j <= 30) match.push(sq.loTxt);
+  });
+  return cnt ? {fit: 1 - miss / cnt / 100, warn, match} : null;
+}
+function styleLines(n){
+  const sc = styleCheck(n); if (!sc) return '';
+  return (sc.match.length ? `<span class="c-meta fits">Fits you: ${sc.match.join(', ')}</span>` : '')
+       + (sc.warn.length ? `<span class="c-meta heads">Heads-up: ${sc.warn.join(', ')}</span>` : '');
+}
+
 const KEY = 'pathfinder-survey-v1';
-const blank = () => ({name:'', items:{}, strengths:{}, subjects:[], values:[], edu:[], notes:{}, example:false, savedAs:null});
+const blank = () => ({name:'', items:{}, strengths:{}, subjects:[], values:[], edu:[], notes:{}, style:{}, example:false, savedAs:null});
 let state = blank();
 try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.items) state = Object.assign(blank(), s); } catch(e){}
 // Saved surveys, one per person, keyed by lowercase name. The open survey keeps saving to its entry.
@@ -402,7 +461,7 @@ try { saved = JSON.parse(localStorage.getItem(SAVED_KEY)) || {}; } catch(e){}
 if (state.savedAs && !saved[state.savedAs]) state.savedAs = null;
 const clone = o => JSON.parse(JSON.stringify(o));
 function persistSaved(){ try { localStorage.setItem(SAVED_KEY, JSON.stringify(saved)); } catch(e){} }
-function hasAnswers(st){ return Object.keys(st.items).length || Object.keys(st.strengths).length || st.subjects.length || st.values.length || st.edu.length || Object.values(st.notes).some(v => v && v.trim()); }
+function hasAnswers(st){ return Object.keys(st.items).length || Object.keys(st.strengths).length || Object.keys(st.style || {}).length || st.subjects.length || st.values.length || st.edu.length || Object.values(st.notes).some(v => v && v.trim()); }
 function unsaved(){ return !state.example && !state.savedAs && hasAnswers(state); }
 function save(){
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
@@ -440,6 +499,11 @@ function buildForm(){
   $('#subjects').innerHTML = SUBJECTS.map(o => chip('subjects', o)).join('');
   $('#values').innerHTML = VALUES.map(o => chip('values', o)).join('');
   $('#edu').innerHTML = EDU.map(o => chip('edu', o)).join('');
+  $('#style-qs').innerHTML = STYLEQ.map(sq => `<div class="sq" role="radiogroup" aria-labelledby="sq-${sq.id}">
+      <div class="q-text" id="sq-${sq.id}">${esc(sq.q)}</div>
+      <div class="bipolar"><span class="pole lo">${esc(sq.lo)}</span><div class="scale dots">${[1,2,3,4,5].map(v =>
+        `<input type="radio" name="ws-${sq.id}" id="ws-${sq.id}-${v}" value="${v}"><label for="ws-${sq.id}-${v}"><span class="sr">${esc(['Strongly: ' + sq.lo, 'Leaning: ' + sq.lo, 'No preference', 'Leaning: ' + sq.hi, 'Strongly: ' + sq.hi][v-1])}</span></label>`).join('')}</div><span class="pole hi">${esc(sq.hi)}</span></div>
+    </div>`).join('');
   $('#notes').innerHTML = NOTES.map(n =>
     `<label for="note-${n.id}">${esc(n.q)}<span>${esc(n.h)}</span><textarea id="note-${n.id}" data-note="${n.id}"></textarea></label>`).join('');
 }
@@ -447,6 +511,7 @@ function syncForm(){
   document.querySelectorAll('.scale input').forEach(i => i.checked = false);
   for (const [k,v] of Object.entries(state.items)) { const el = document.getElementById(`it-${k}-${v}`); if (el) el.checked = true; }
   for (const [k,v] of Object.entries(state.strengths)) { const el = document.getElementById(`st-${k}-${v}`); if (el) el.checked = true; }
+  for (const [k,v] of Object.entries(state.style)) { const el = document.getElementById(`ws-${k}-${v}`); if (el) el.checked = true; }
   document.querySelectorAll('.chip input').forEach(i => i.checked = state[i.dataset.group].includes(i.value));
   document.querySelectorAll('[data-note]').forEach(t => t.value = state.notes[t.dataset.note] || '');
   $('#student-name').value = state.name || '';
@@ -460,7 +525,8 @@ function limitValues(){
 
 document.addEventListener('change', e => {
   const t = e.target;
-  if (t.name && t.name.startsWith('it-')) state.items[t.name.slice(3)] = +t.value;
+  if (t.name && t.name.startsWith('ws-')) state.style[t.name.slice(3)] = +t.value;
+  else if (t.name && t.name.startsWith('it-')) state.items[t.name.slice(3)] = +t.value;
   else if (t.name && t.name.startsWith('st-')) state.strengths[t.name.slice(3)] = +t.value;
   else if (t.dataset.group) {
     const arr = state[t.dataset.group];
@@ -564,8 +630,8 @@ const codeHTML = ranked => ranked.slice(0,3).map(t => `<span style="color:var(--
 
 function update(){
   const answered = Object.keys(state.items).length, sAns = Object.keys(state.strengths).length;
-  const total = ITEMS.length + STRENGTHS.length + 3;
-  const done = answered + sAns + (state.subjects.length?1:0) + (state.values.length?1:0) + (state.edu.length?1:0);
+  const total = ITEMS.length + STRENGTHS.length + STYLEQ.length + 3;
+  const done = answered + sAns + Object.keys(state.style).length + (state.subjects.length?1:0) + (state.values.length?1:0) + (state.edu.length?1:0);
   $('#bar').style.width = (100*done/total) + '%';
   $('#c1').textContent = `${answered} of ${ITEMS.length} answered`;
   $('#c2').textContent = `${sAns} of ${STRENGTHS.length} answered`;
@@ -594,10 +660,23 @@ function renderResults(scores, ranked, ready, answered){
   const valLabels = VALUES.filter(v => state.values.includes(v.id)).map(v => v.l);
   const ment = mentionedCareers(state);
   const onCards = new Set(top.flatMap(t => TYPES[t].careers.map(c => c[0])));
+  let fitHTML = '';
+  if (Object.keys(state.style).length >= 3){
+    const best = Object.keys(CAREER_INFO).map(n => {
+      const sc = styleCheck(n); if (!sc) return null;
+      const interest = Math.max(...CAREER_INFO[n].types.map(t => scores[t])) / 100;
+      return {n, rank: .6 * interest + .4 * sc.fit};
+    }).filter(Boolean).sort((a,b) => b.rank - a.rank).slice(0, 6);
+    fitHTML = `<div class="mentioned">
+      <div class="sub-h">Careers that fit how you like to work</div>
+      <p class="msg">These combine your interest scores with your answers about work setting and style. What each job is really like comes from the U.S. Department of Labor’s <a href="https://www.onetonline.org/" target="_blank" rel="noopener">O*NET</a> survey of people who do it.</p>
+      <ul class="list">${best.map(({n}) => { const c = CAREER_INFO[n]; return `<li><span class="c-name"><span>${c.types.map(t => `<span class="tchip" style="background:var(--${t})" title="${TYPES[t].name}">${t}</span>`).join('')}${n}</span><span class="c-meta">${outlookHTML(n)}</span>${styleLines(n)}</span><span class="edu${edu.includes(c.edu)?' match':''}">${EDU_LABEL[c.edu]}</span></li>`; }).join('')}</ul>
+    </div>`;
+  }
   const mentHTML = ment.length ? `<div class="mentioned">
       <div class="sub-h">Careers from your own answers</div>
       <p class="msg">You named these in Part 5. They're worth a close look even when they don't match your top three types.</p>
-      <ul class="list">${ment.map(({n, word}) => { const c = CAREER_INFO[n]; return `<li><span class="c-name"><span>${c.types.map(t => `<span class="tchip" style="background:var(--${t})" title="${TYPES[t].name}">${t}</span>`).join('')}${n}</span><span class="c-meta">${outlookHTML(n)}</span><span class="c-meta">You wrote “${esc(word)}”${onCards.has(n) ? ' · also on your cards below' : ''}</span></span><span class="edu${edu.includes(c.edu)?' match':''}">${EDU_LABEL[c.edu]}</span></li>`; }).join('')}</ul>
+      <ul class="list">${ment.map(({n, word}) => { const c = CAREER_INFO[n]; return `<li><span class="c-name"><span>${c.types.map(t => `<span class="tchip" style="background:var(--${t})" title="${TYPES[t].name}">${t}</span>`).join('')}${n}</span><span class="c-meta">${outlookHTML(n)}</span><span class="c-meta">You wrote “${esc(word)}”${onCards.has(n) ? ' · also on your cards below' : ''}</span>${styleLines(n)}</span><span class="edu${edu.includes(c.edu)?' match':''}">${EDU_LABEL[c.edu]}</span></li>`; }).join('')}</ul>
     </div>` : '';
 
   const typeCard = t => {
@@ -608,7 +687,7 @@ function renderResults(scores, ranked, ready, answered){
       <p>${T.desc}</p>
       <div class="cols">
         <div><h4>Majors to explore</h4><ul class="list">${T.majors.map(m => `<li>${m}</li>`).join('')}</ul></div>
-        <div><h4>Careers to look into</h4><ul class="list">${careers.map(([n,e]) => `<li><span class="c-name"><span>${n}</span><span class="c-meta">${outlookHTML(n)}</span></span><span class="edu${edu.includes(e)?' match':''}">${EDU_LABEL[e]}</span></li>`).join('')}</ul></div>
+        <div><h4>Careers to look into</h4><ul class="list">${careers.map(([n,e]) => `<li><span class="c-name"><span>${n}</span><span class="c-meta">${outlookHTML(n)}</span>${styleLines(n)}</span><span class="edu${edu.includes(e)?' match':''}">${EDU_LABEL[e]}</span></li>`).join('')}</ul></div>
       </div>
     </article>`;
   };
@@ -630,6 +709,7 @@ function renderResults(scores, ranked, ready, answered){
       <ul>${COMBOS[pair].map(c => `<li>${c}</li>`).join('')}</ul>
     </div>
     ${mentHTML}
+    ${fitHTML}
     <div class="types">${top.map(typeCard).join('')}</div>
     <div class="ai-key">
       <div class="sub-h">How AI may change these careers</div>
@@ -681,6 +761,8 @@ function summaryText(){
   if (vals.length) L.push(`What matters most: ${vals.join(', ')}`);
   const edu = EDU.filter(e => state.edu.includes(e.id)).map(e => e.l);
   if (edu.length) L.push(`Open to: ${edu.join(', ')}`);
+  const sty = STYLEQ.filter(sq => state.style[sq.id]).map(sq => { const a = state.style[sq.id]; return a === 3 ? `${sq.q} No preference` : `${sq.q} ${a < 3 ? sq.lo : sq.hi}${a === 1 || a === 5 ? ' (strongly)' : ''}`; });
+  if (sty.length) L.push('', 'How I like to work:', ...sty.map(s => '  ' + s));
   NOTES.forEach(n => { const v = (state.notes[n.id]||'').trim(); if (v) L.push('', n.q, '  ' + v); });
   return L.join('\n');
 }
@@ -716,6 +798,7 @@ $('#load-example').addEventListener('click', e => {
   state.subjects = ['math','chemphys','cs','art','shop'];
   state.values = ['discover','create','indep'];
   state.edu = ['bach','grad'];
+  state.style = {out:2, move:3, people:2, free:5, sched:2, hours:3, pace:3, risk:2};
   state.notes = {flow:'Building levels in a game editor, or taking apart old electronics.', askme:'Fixing laptops and explaining math homework.', seen:'My aunt is an architect and I liked seeing her models.'};
   save(); syncForm(); update();
   $('#results').scrollIntoView({behavior:'smooth'});
