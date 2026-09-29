@@ -302,6 +302,8 @@ const ITEMS_BY_TYPE = {
 };
 const ITEMS = [];
 for (let i=0;i<5;i++) ORDER.forEach(t => ITEMS.push({id:(t+(i+1)).toLowerCase(), t, q:ITEMS_BY_TYPE[t][i]}));
+// Added after launch; own id so answers saved before it existed still line up.
+ITEMS.splice(8, 0, {id:'i6', t:'I', q:'Write code to build an app, game, or tool'});
 const LIKE = ['Nope','Meh','Okay','Like it','Love it'];
 
 const STRENGTHS = [
