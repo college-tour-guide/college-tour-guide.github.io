@@ -144,6 +144,7 @@ div.q:first-child{border-top:0}
 .c-name{display:grid;gap:1px}
 .c-meta{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .ai{font-weight:700}
+.nw{white-space:nowrap}
 .ai.L{color:var(--S)}
 .ai.M{color:var(--E)}
 .ai.H{color:var(--R)}
@@ -292,7 +293,7 @@ function outlookHTML(n){
   const o = OUTLOOK[n];
   if (!o) return 'No single federal job forecast';
   const g = o[0] >= 1 ? '+' + Math.round(o[0]) + '% jobs' : o[0] <= -1 ? '−' + Math.round(-o[0]) + '% jobs' : 'Flat job growth';
-  return `<span class="ai ${o[2]}">AI exposure ${AI_WORD[o[2]]}</span> · ${g} · $${o[1]}k median`;
+  return `<span class="nw ai ${o[2]}">AI exposure ${AI_WORD[o[2]]}</span> · <span class="nw">${g}</span> · <span class="nw">$${o[1]}k pay</span>`;
 }
 function outlookText(n){ const o = OUTLOOK[n]; return o ? ` (AI exposure ${AI_WORD[o[2]]}, ${o[0] > 0 ? '+' : ''}${o[0]}% jobs by 2035, $${o[1]}k median)` : ''; }
 
@@ -532,7 +533,7 @@ function renderResults(scores, ranked, ready, answered){
     <div class="types">${top.map(typeCard).join('')}</div>
     <div class="ai-key">
       <div class="sub-h">How AI may change these careers</div>
-      <p style="max-width:75ch">Each career above shows three numbers that help you think about the future. Jobs overall are expected to grow about 3.5% by 2035, so anything well above that is growing fast.</p>
+      <p style="max-width:75ch">Each career above shows three things that help you think about the future: its AI exposure, how much the number of jobs is expected to grow by 2035, and typical (median) yearly pay in 2025. Jobs overall are expected to grow about 3.5% by 2035, so anything well above that is growing fast.</p>
       <ul>
         <li><span class="ai L">AI exposure Low</span>, <span class="ai M">Medium</span>, or <span class="ai H">High</span> is how much of the job's day-to-day tasks AI tools like ChatGPT could speed up a lot. It compares every job with about 770 others and splits them into thirds.</li>
         <li>High exposure does not mean the job goes away. In fields that are still growing fast, like data science, AI mostly changes how the work gets done. The risk is biggest where exposure is high and job growth is flat or falling.</li>
