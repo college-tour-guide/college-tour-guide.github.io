@@ -139,7 +139,16 @@ div.q:first-child{border-top:0}
 @media (max-width:720px){.cols{grid-template-columns:1fr}}
 .cols h4{font-size:15px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-family:var(--body)}
 .list{list-style:none;margin:0;padding:0;display:grid;gap:5px}
-.list li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:15px}
+.list li{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;font-size:15px}
+.list li .edu{margin-top:2px}
+.c-name{display:grid;gap:1px}
+.c-meta{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ai{font-weight:700}
+.ai.L{color:var(--S)}
+.ai.M{color:var(--E)}
+.ai.H{color:var(--R)}
+.ai-key{display:grid;gap:10px;background:var(--ground);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.ai-key ul{margin:0;padding-left:20px;display:grid;gap:6px;max-width:75ch}
 .edu{font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
 .edu.match{background:var(--accent-soft);border-color:var(--accent);color:var(--ink);font-weight:700}
 .overlap{border-radius:var(--radius);padding:22px;background:var(--accent-soft);display:grid;gap:10px}
@@ -273,6 +282,19 @@ const TYPES = {
      majors:['Accounting','Supply chain management','Information systems','Actuarial science','Health information management','Paralegal studies','Finance'],
      careers:[['Bookkeeper','cert'],['Medical records specialist','cert'],['Court reporter','cert'],['Paralegal','assoc'],['Accountant','bach'],['Actuary','bach'],['Logistics analyst','bach'],['Database administrator','bach'],['Budget analyst','bach'],['Insurance underwriter','bach']]}
 };
+
+// Per career: [BLS projected job growth 2025-35 (%), BLS 2025 median pay ($k), AI exposure tercile L/M/H].
+// Growth and pay: BLS Employment Projections Table 1.2 (2025-35). Exposure: Eloundou et al. (Science, 2024),
+// average of human and GPT-4 task ratings (beta), split into thirds across 774 occupations.
+const OUTLOOK = {"Electrician":[9.2,63,"L"],"HVAC technician":[10.9,61,"L"],"Wind turbine technician":[29.5,64,"L"],"Aircraft mechanic":[5.4,80,"L"],"Chef":[6.6,62,"M"],"Firefighter":[3.7,59,"L"],"Civil engineering technician":[3.2,65,"H"],"Land surveyor":[5.8,75,"H"],"Forester":[2.2,76,"M"],"Mechanical engineer":[11.2,104,"M"],"Clinical lab technician":[2.7,63,"M"],"Software developer":[10.2,136,"H"],"Chemist":[6.4,91,"M"],"Environmental scientist":[6.1,82,"H"],"Data scientist":[34.6,120,"H"],"Physician":[3.6,271,"M"],"Pharmacist":[5.2,141,"M"],"Economist":[4.7,125,"H"],"Urban and regional planner":[3.9,89,"H"],"Research psychologist":[2.3,111,"M"],"Photographer":[-0.7,45,"M"],"Sound engineer":[-3.1,73,"M"],"Video editor":[3.7,75,"H"],"Graphic designer":[-1.7,63,"H"],"UX designer":[6.0,104,"H"],"Writer or editor":[-0.3,77,"H"],"Animator":[-0.3,102,"H"],"Game designer":[6.0,104,"H"],"Interior designer":[2.7,67,"H"],"Architect":[4.3,99,"H"],"EMT or paramedic":[5.8,48,"M"],"Registered nurse":[5.6,98,"M"],"Dental hygienist":[8.0,98,"L"],"Teacher":[-0.2,72,"M"],"Social worker":[6.2,62,"M"],"School counselor":[2.9,64,"M"],"Physical therapist":[11.9,103,"M"],"Occupational therapist":[14.8,100,"M"],"Speech-language pathologist":[16.6,98,"M"],"Real estate agent":[1.7,53,"H"],"Sales representative":[-0.9,72,"H"],"Marketing manager":[6.9,167,"H"],"Financial advisor":[1.4,105,"H"],"Project manager":[6.7,102,"H"],"Hotel or restaurant manager":[5.8,69,"M"],"Lawyer":[4.7,160,"H"],"Bookkeeper":[-5.6,51,"H"],"Medical records specialist":[7.8,51,"H"],"Court reporter":[-0.1,72,"H"],"Paralegal":[-0.3,63,"H"],"Accountant":[5.0,84,"H"],"Actuary":[9.2,130,"H"],"Logistics analyst":[17.6,82,"H"],"Database administrator":[-0.1,105,"H"],"Budget analyst":[1.9,92,"H"],"Insurance underwriter":[-3.8,81,"H"]};
+const AI_WORD = {L:'Low', M:'Medium', H:'High'};
+function outlookHTML(n){
+  const o = OUTLOOK[n];
+  if (!o) return 'No single federal job forecast';
+  const g = o[0] >= 1 ? '+' + Math.round(o[0]) + '% jobs' : o[0] <= -1 ? '−' + Math.round(-o[0]) + '% jobs' : 'Flat job growth';
+  return `<span class="ai ${o[2]}">AI exposure ${AI_WORD[o[2]]}</span> · ${g} · $${o[1]}k median`;
+}
+function outlookText(n){ const o = OUTLOOK[n]; return o ? ` (AI exposure ${AI_WORD[o[2]]}, ${o[0] > 0 ? '+' : ''}${o[0]}% jobs by 2035, $${o[1]}k median)` : ''; }
 
 const COMBOS = {
   RI:['Mechanical, civil, or aerospace engineering','Robotics','Veterinary medicine','Geology','Environmental engineering','Electrical technology'],
@@ -486,7 +508,7 @@ function renderResults(scores, ranked, ready, answered){
       <p>${T.desc}</p>
       <div class="cols">
         <div><h4>Majors to explore</h4><ul class="list">${T.majors.map(m => `<li>${m}</li>`).join('')}</ul></div>
-        <div><h4>Careers to look into</h4><ul class="list">${careers.map(([n,e]) => `<li><span>${n}</span><span class="edu${edu.includes(e)?' match':''}">${EDU_LABEL[e]}</span></li>`).join('')}</ul></div>
+        <div><h4>Careers to look into</h4><ul class="list">${careers.map(([n,e]) => `<li><span class="c-name"><span>${n}</span><span class="c-meta">${outlookHTML(n)}</span></span><span class="edu${edu.includes(e)?' match':''}">${EDU_LABEL[e]}</span></li>`).join('')}</ul></div>
       </div>
     </article>`;
   };
@@ -508,6 +530,17 @@ function renderResults(scores, ranked, ready, answered){
       <ul>${COMBOS[pair].map(c => `<li>${c}</li>`).join('')}</ul>
     </div>
     <div class="types">${top.map(typeCard).join('')}</div>
+    <div class="ai-key">
+      <div class="sub-h">How AI may change these careers</div>
+      <p style="max-width:75ch">Each career above shows three numbers that help you think about the future. Jobs overall are expected to grow about 3.5% by 2035, so anything well above that is growing fast.</p>
+      <ul>
+        <li><span class="ai L">AI exposure Low</span>, <span class="ai M">Medium</span>, or <span class="ai H">High</span> is how much of the job's day-to-day tasks AI tools like ChatGPT could speed up a lot. It compares every job with about 770 others and splits them into thirds.</li>
+        <li>High exposure does not mean the job goes away. In fields that are still growing fast, like data science, AI mostly changes how the work gets done. The risk is biggest where exposure is high and job growth is flat or falling.</li>
+        <li>So far AI has hit entry-level hiring hardest. Jobs that need hands-on skill, a license, or being there in person (health care, the trades, aviation) have held up best.</li>
+        <li>A strong plan for a changing job market: pick a field you like, and learn to use AI tools well inside it.</li>
+      </ul>
+      <p class="fineprint">Job growth and median pay: U.S. Bureau of Labor Statistics, <a href="https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm" target="_blank" rel="noopener">Employment Projections 2025–35</a>. AI exposure: Eloundou, Manning, Mishkin and Rock, <a href="https://www.science.org/doi/10.1126/science.adj0998" target="_blank" rel="noopener">“GPTs are GPTs,” Science (2024)</a>, averaging its human and GPT-4 ratings. Entry-level trends: <a href="https://digitaleconomy.stanford.edu/news/canariesaug26/" target="_blank" rel="noopener">Stanford Digital Economy Lab (August 2026)</a>. These are forecasts, and they are changing quickly.</p>
+    </div>
     ${valLabels.length ? `<div class="sub-block"><div class="sub-h">What you said matters most</div><p>${valLabels.join(', ')}. When you research a career, check whether it offers these. Two jobs in the same field can feel very different on these points.</p></div>` : ''}
     ${state.edu.includes('mil') ? `<p>You said you're open to the military. Many of the careers above, especially technical and medical ones, have matching military jobs that come with paid training and money for college later.</p>` : ''}
     <div class="next">
@@ -538,7 +571,7 @@ function summaryText(){
   L.push(`Interest code: ${top.join('')} (${top.map(t => TYPES[t].name).join(', ')})`, '');
   L.push('Scores (0-100):'); ranked.forEach(t => L.push(`  ${TYPES[t].name}: ${scores[t]}`));
   L.push('', `Where my top two overlap: ${COMBOS[pair].join('; ')}`);
-  top.forEach(t => { L.push('', `${TYPES[t].name} (${TYPES[t].nick})`, `  Majors: ${TYPES[t].majors.join('; ')}`, `  Careers: ${TYPES[t].careers.map(c => c[0]).join('; ')}`); });
+  top.forEach(t => { L.push('', `${TYPES[t].name} (${TYPES[t].nick})`, `  Majors: ${TYPES[t].majors.join('; ')}`, `  Careers: ${TYPES[t].careers.map(c => c[0] + outlookText(c[0])).join('; ')}`); });
   const subj = SUBJECTS.filter(s => state.subjects.includes(s.id)).map(s => s.l);
   if (subj.length) L.push('', `Favorite classes: ${subj.join(', ')}`);
   const vals = VALUES.filter(v => state.values.includes(v.id)).map(v => v.l);
