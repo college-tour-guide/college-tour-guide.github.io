@@ -19,3 +19,8 @@ A 10-minute interest and strengths survey for high school students, based on Hol
 six interest types (RIASEC). It gives a three-letter interest code, a hexagon profile, and
 matching majors and careers. Answers stay in the student's own browser.
 Live at https://college-tour-guide.github.io/pathfinder/
+
+Financial aid links: each campus card links to the school's net price calculator and financial
+aid office (federal IPEDS directory, 2024 survey; Cal State calculators from the CSU system cost
+page; links checked October 2026). The "Outside scholarships" panel links to free scholarship
+searches and the FAFSA, CSS Profile, Cal Grant, and Middle Class Scholarship pages.
