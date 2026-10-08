@@ -24,3 +24,10 @@ Financial aid links: each campus card links to the school's net price calculator
 aid office (federal IPEDS directory, 2024 survey; Cal State calculators from the CSU system cost
 page; links checked October 2026). The "Outside scholarships" panel links to free scholarship
 searches and the FAFSA, CSS Profile, Cal Grant, and Middle Class Scholarship pages.
+
+International universities (13): McGill, UBC, Toronto, Concordia, McMaster, Memorial (Canada);
+St Andrews, Edinburgh, Glasgow (Scotland); Trinity College Dublin, University College Dublin
+(Ireland); University of Amsterdam, Maastricht (Netherlands). Costs, admission rules, deadlines,
+and scholarships come from each university's own website (October 2026), converted to dollars at
+ECB rates of October 8, 2026. These schools are not in the U.S. federal college surveys, so they
+have no admission odds, earnings, majors-by-field, or student-body data.

@@ -897,6 +897,136 @@ window.CAMPUS_CLIMATE={
   "rainDays": 47,
   "category": "mild",
   "label": "Mild year-round (coastal California)"
+ },
+ "McGill": {
+  "winterHigh": 28,
+  "summerHigh": 77,
+  "precipIn": 49,
+  "snowIn": 60,
+  "sunHours": 7.9,
+  "rainDays": 103,
+  "category": "cold",
+  "label": "Four seasons, cold and snowy winters"
+ },
+ "UBC": {
+  "winterHigh": 43,
+  "summerHigh": 70,
+  "precipIn": 67,
+  "snowIn": 37,
+  "sunHours": 7.8,
+  "rainDays": 130,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "University of Toronto": {
+  "winterHigh": 35,
+  "summerHigh": 77,
+  "precipIn": 37,
+  "snowIn": 36,
+  "sunHours": 8.4,
+  "rainDays": 91,
+  "category": "cold",
+  "label": "Four seasons, cold and snowy winters"
+ },
+ "Concordia": {
+  "winterHigh": 28,
+  "summerHigh": 77,
+  "precipIn": 49,
+  "snowIn": 60,
+  "sunHours": 7.9,
+  "rainDays": 103,
+  "category": "cold",
+  "label": "Four seasons, cold and snowy winters"
+ },
+ "McMaster": {
+  "winterHigh": 36,
+  "summerHigh": 78,
+  "precipIn": 36,
+  "snowIn": 36,
+  "sunHours": 8.3,
+  "rainDays": 86,
+  "category": "cold",
+  "label": "Four seasons, cold and snowy winters"
+ },
+ "Memorial": {
+  "winterHigh": 35,
+  "summerHigh": 66,
+  "precipIn": 63,
+  "snowIn": 84,
+  "sunHours": 5.6,
+  "rainDays": 124,
+  "category": "cold",
+  "label": "Four seasons, cold and snowy winters"
+ },
+ "St Andrews": {
+  "winterHigh": 46,
+  "summerHigh": 65,
+  "precipIn": 37,
+  "snowIn": 6,
+  "sunHours": 7.2,
+  "rainDays": 103,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "Edinburgh": {
+  "winterHigh": 45,
+  "summerHigh": 64,
+  "precipIn": 41,
+  "snowIn": 6,
+  "sunHours": 7.1,
+  "rainDays": 115,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "Glasgow": {
+  "winterHigh": 45,
+  "summerHigh": 65,
+  "precipIn": 52,
+  "snowIn": 7,
+  "sunHours": 6.5,
+  "rainDays": 144,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "Trinity College Dublin": {
+  "winterHigh": 49,
+  "summerHigh": 66,
+  "precipIn": 39,
+  "snowIn": 2,
+  "sunHours": 7.3,
+  "rainDays": 107,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "University College Dublin": {
+  "winterHigh": 49,
+  "summerHigh": 66,
+  "precipIn": 39,
+  "snowIn": 2,
+  "sunHours": 7.3,
+  "rainDays": 107,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "University of Amsterdam": {
+  "winterHigh": 46,
+  "summerHigh": 71,
+  "precipIn": 42,
+  "snowIn": 9,
+  "sunHours": 7.8,
+  "rainDays": 117,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
+ },
+ "Maastricht": {
+  "winterHigh": 46,
+  "summerHigh": 74,
+  "precipIn": 41,
+  "snowIn": 9,
+  "sunHours": 7.4,
+  "rainDays": 114,
+  "category": "pnw",
+  "label": "Cool, rainy winters; mild summers (Pacific Northwest)"
  }
 };
 window.CAMPUS_CLIMATE_META={

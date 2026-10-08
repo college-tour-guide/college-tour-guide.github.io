@@ -800,6 +800,123 @@ window.CAMPUS_MOUNTAINS={
   "bigMountainMiles": null,
   "maxRelief": 1932,
   "label": "Mountains within a short drive"
+ },
+ "McGill": {
+  "campusElevFt": 144,
+  "mountainMiles": 50,
+  "mountainRelief": 1624,
+  "bearing": "SSW",
+  "bigMountainMiles": null,
+  "maxRelief": 2438,
+  "label": "Mountains within an hour or so"
+ },
+ "UBC": {
+  "campusElevFt": 276,
+  "mountainMiles": 8,
+  "mountainRelief": 2543,
+  "bearing": "NNE",
+  "bigMountainMiles": 12,
+  "maxRelief": 5994,
+  "label": "Mountains a few minutes away"
+ },
+ "University of Toronto": {
+  "campusElevFt": 364,
+  "mountainMiles": 50,
+  "mountainRelief": 1168,
+  "bearing": "WNW",
+  "bigMountainMiles": null,
+  "maxRelief": 1759,
+  "label": "Mountains within an hour or so"
+ },
+ "Concordia": {
+  "campusElevFt": 220,
+  "mountainMiles": 50,
+  "mountainRelief": 1558,
+  "bearing": "NNW",
+  "bigMountainMiles": null,
+  "maxRelief": 2185,
+  "label": "Mountains within an hour or so"
+ },
+ "McMaster": {
+  "campusElevFt": 285,
+  "mountainMiles": 35,
+  "mountainRelief": 1010,
+  "bearing": "NNW",
+  "bigMountainMiles": null,
+  "maxRelief": 1575,
+  "label": "Mountains within a short drive"
+ },
+ "Memorial": {
+  "campusElevFt": 243,
+  "mountainMiles": null,
+  "mountainRelief": null,
+  "bearing": null,
+  "bigMountainMiles": null,
+  "maxRelief": 495,
+  "label": "Flat country; no high ground nearby"
+ },
+ "St Andrews": {
+  "campusElevFt": 69,
+  "mountainMiles": 18,
+  "mountainRelief": 1076,
+  "bearing": "WSW",
+  "bigMountainMiles": null,
+  "maxRelief": 2159,
+  "label": "Mountains within a short drive"
+ },
+ "Edinburgh": {
+  "campusElevFt": 312,
+  "mountainMiles": 5,
+  "mountainRelief": 1014,
+  "bearing": "SSW",
+  "bigMountainMiles": null,
+  "maxRelief": 2142,
+  "label": "Mountains at the edge of campus"
+ },
+ "Glasgow": {
+  "campusElevFt": 112,
+  "mountainMiles": 25,
+  "mountainRelief": 1545,
+  "bearing": "NW",
+  "bigMountainMiles": null,
+  "maxRelief": 2713,
+  "label": "Mountains within a short drive"
+ },
+ "Trinity College Dublin": {
+  "campusElevFt": 36,
+  "mountainMiles": 8,
+  "mountainRelief": 1342,
+  "bearing": "SSW",
+  "bigMountainMiles": null,
+  "maxRelief": 2090,
+  "label": "Mountains a few minutes away"
+ },
+ "University College Dublin": {
+  "campusElevFt": 62,
+  "mountainMiles": 5,
+  "mountainRelief": 1188,
+  "bearing": "SSW",
+  "bigMountainMiles": null,
+  "maxRelief": 2415,
+  "label": "Mountains at the edge of campus"
+ },
+ "University of Amsterdam": {
+  "campusElevFt": 49,
+  "mountainMiles": null,
+  "mountainRelief": null,
+  "bearing": null,
+  "bigMountainMiles": null,
+  "maxRelief": 240,
+  "label": "Flat country; no high ground nearby"
+ },
+ "Maastricht": {
+  "campusElevFt": 184,
+  "mountainMiles": 25,
+  "mountainRelief": 1325,
+  "bearing": "SE",
+  "bigMountainMiles": null,
+  "maxRelief": 1673,
+  "label": "Mountains within a short drive"
  }
 };
 window.CAMPUS_MOUNTAINS_META={

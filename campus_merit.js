@@ -533,6 +533,110 @@ window.CAMPUS_MERIT={
   "avg": 38751,
   "programs": "Emory Scholars (Woodruff, full tuition)",
   "note": "Competitive Emory Scholars program by school nomination; otherwise need-based."
+ },
+ "McGill": {
+  "pct": null,
+  "avg": null,
+  "programs": "Entrance Scholarship (CAD 3,000, automatic); Major Entrance Scholarships (CAD 3,000-10,000 a year, renewable, separate application)",
+  "note": "McGill reviews entrance scholarships on grades and test scores.",
+  "intl": true,
+  "lvl": 3
+ },
+ "UBC": {
+  "pct": null,
+  "avg": null,
+  "programs": "International Major Entrance Scholarship (CAD 10,000-25,000 a year, renewable; automatic consideration); Outstanding International Student Award (CAD 10,000-25,000, one time)",
+  "note": "Competitive awards; apply by the deadline to be considered.",
+  "intl": true,
+  "lvl": 2
+ },
+ "University of Toronto": {
+  "pct": null,
+  "avg": null,
+  "programs": "Lester B. Pearson International Scholarship (full tuition, books, fees, and residence for 4 years; about 37 a year); U of T Scholars (CAD 10,000, one time, about 900 awards, automatic)",
+  "note": "Pearson requires a nomination from your high school.",
+  "intl": true,
+  "lvl": 2
+ },
+ "Concordia": {
+  "pct": null,
+  "avg": null,
+  "programs": "Limited for international students: Garnet Key Entrance Award (CAD 850); program-specific awards (CAD 2,500-7,500, deadline early December); John Molson CIBC Entrance Scholarship (CAD 5,000, essay)",
+  "note": "Concordia's CAD 4,000 Undergraduate Excellence Award is limited to students in Canada.",
+  "intl": true,
+  "lvl": 2
+ },
+ "McMaster": {
+  "pct": null,
+  "avg": null,
+  "programs": "International entrance awards: Science Global Scholars (CAD 10,000, then 7,500 a year); Social Sciences/Humanities Scholars (CAD 10,000, then 5,000 a year, 85%+ average); engineering and computer science awards (CAD 10,000); Award of Excellence (up to CAD 200,000 over 4 years)",
+  "note": "Several awards are tied to your admission average.",
+  "intl": true,
+  "lvl": 3
+ },
+ "Memorial": {
+  "pct": null,
+  "avg": null,
+  "programs": "International Entrance Scholarship (up to CAD 6,000, automatic); Killam American Undergraduate Scholarship (for U.S. citizens)",
+  "note": "Entrance scholarships are first-year awards assessed automatically.",
+  "intl": true,
+  "lvl": 3
+ },
+ "St Andrews": {
+  "pct": null,
+  "avg": null,
+  "programs": "International Excellence Scholarship (full tuition every year, merit); International Undergraduate Scholarship (need-based tuition reduction)",
+  "note": "Scholarship applications are due in late January.",
+  "intl": true,
+  "lvl": 2
+ },
+ "Edinburgh": {
+  "pct": null,
+  "avg": null,
+  "programs": "No general merit scholarship for international first-years; a few subject awards (e.g., Global Undergraduate Mathematics Scholarship, GBP 5,000)",
+  "note": "Plan on paying the full fee.",
+  "intl": true,
+  "lvl": 1
+ },
+ "Glasgow": {
+  "pct": null,
+  "avg": null,
+  "programs": "World Changers Global Excellence Scholarship (GBP 7,000 a year in arts and social sciences, GBP 10,000 in sciences; renewable)",
+  "note": "A tuition discount renewed with satisfactory progress.",
+  "intl": true,
+  "lvl": 3
+ },
+ "Trinity College Dublin": {
+  "pct": null,
+  "avg": null,
+  "programs": "Global Excellence Undergraduate Scholarship (EUR 2,000-5,000 off first-year tuition, rolling; some programs excluded)",
+  "note": "Awarded on a rolling basis, so apply early.",
+  "intl": true,
+  "lvl": 3
+ },
+ "University College Dublin": {
+  "pct": null,
+  "avg": null,
+  "programs": "Global Excellence Scholarship (50% or 100% of tuition, limited; apply by February 1 after an offer)",
+  "note": "Apply by the December 1 priority deadline to be eligible.",
+  "intl": true,
+  "lvl": 2
+ },
+ "University of Amsterdam": {
+  "pct": null,
+  "avg": null,
+  "programs": "Amsterdam University College Scholarship Fund (EUR 4,000, or up to 26,000 a year for non-EEA students, need-based); PPLE awards (EUR 5,000-10,000, a few a year)",
+  "note": "The main university is not on the 2026-27 Holland Scholarship list.",
+  "intl": true,
+  "lvl": 1
+ },
+ "Maastricht": {
+  "pct": null,
+  "avg": null,
+  "programs": "Holland Scholarship (EUR 5,000 in the first year); a need-based University College Maastricht scholarship for low-income non-EU students",
+  "note": "Holland Scholarships are competitive.",
+  "intl": true,
+  "lvl": 2
  }
 };
 window.CAMPUS_MERIT_META={

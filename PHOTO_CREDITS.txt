@@ -622,3 +622,94 @@ Emory
   author:  Daniel Mayer
   license: CC BY-SA 3.0
   via:     Wikidata image (P18)
+
+McGill
+  file:    File:Arts Building, McGill University, Aug 31 2022.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Arts_Building,_McGill_University,_Aug_31_2022.jpg
+  author:  D. Benjamin Miller
+  license: CC0
+  via:     Wikidata image (P18) or Commons search
+
+UBC
+  file:    File:Irving K. Barber Library.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Irving_K._Barber_Library.jpg
+  author:  CjayD
+  license: CC BY 2.0
+  via:     Wikidata image (P18) or Commons search
+
+University of Toronto
+  file:    File:Facing North.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Facing_North.jpg
+  author:  KTMAR
+  license: CC BY 3.0
+  via:     Wikidata image (P18) or Commons search
+
+Concordia
+  file:    File:Huron River from Concordia University campus, 4090 Geddes Road, Ann Arbor, Michigan - panoramio.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Huron_River_from_Concordia_University_campus,_4090_Geddes_Road,_Ann_Arbor,_Michigan_-_panoramio.jpg
+  author:  Dwight Burdette
+  license: CC BY 3.0
+  via:     Wikidata image (P18) or Commons search
+
+McMaster
+  file:    File:McMaster University campus.jpg
+  source:  https://commons.wikimedia.org/wiki/File:McMaster_University_campus.jpg
+  author:  Jokehoe
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18) or Commons search
+
+Memorial
+  file:    File:MemorialUniversity.jpg
+  source:  https://commons.wikimedia.org/wiki/File:MemorialUniversity.jpg
+  author:  User:Neelix
+  license: Public domain
+  via:     Wikidata image (P18) or Commons search
+
+St Andrews
+  file:    File:St Andrews University Classics Building.jpg
+  source:  https://commons.wikimedia.org/wiki/File:St_Andrews_University_Classics_Building.jpg
+  author:  unknown
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18) or Commons search
+
+Edinburgh
+  file:    File:Old College Quad.jpg
+  source:  https://commons.wikimedia.org/wiki/File:Old_College_Quad.jpg
+  author:  Theoden sA
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18) or Commons search
+
+Glasgow
+  file:    File:University of Glasgow Gilbert Scott Building - Feb 2008.jpg
+  source:  https://commons.wikimedia.org/wiki/File:University_of_Glasgow_Gilbert_Scott_Building_-_Feb_2008.jpg
+  author:  Diliff
+  license: CC BY 3.0
+  via:     Wikidata image (P18) or Commons search
+
+Trinity College Dublin
+  file:    File:ImeldaCasey TrinityatNight.jpg
+  source:  https://commons.wikimedia.org/wiki/File:ImeldaCasey_TrinityatNight.jpg
+  author:  Imelda Casey
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18) or Commons search
+
+University College Dublin
+  file:    File:University College Dublin Campus Photo1.jpg
+  source:  https://commons.wikimedia.org/wiki/File:University_College_Dublin_Campus_Photo1.jpg
+  author:  Leandro Neumann Ciuffo
+  license: CC BY 2.0
+  via:     Wikidata image (P18) or Commons search
+
+University of Amsterdam
+  file:    File:University of Amsterdam 235 2094.jpg
+  source:  https://commons.wikimedia.org/wiki/File:University_of_Amsterdam_235_2094.jpg
+  author:  C messier
+  license: CC BY-SA 4.0
+  via:     Wikidata image (P18) or Commons search
+
+Maastricht
+  file:    File:UM, Minderbroedersberg.jpg
+  source:  https://commons.wikimedia.org/wiki/File:UM,_Minderbroedersberg.jpg
+  author:  Kleon3
+  license: CC BY-SA 3.0
+  via:     Wikidata image (P18) or Commons search

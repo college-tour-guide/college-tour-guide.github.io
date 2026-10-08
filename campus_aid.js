@@ -355,6 +355,58 @@ window.CAMPUS_AID={
  "Emory": {
   "npc": "https://npc.collegeboard.org/app/emory",
   "faid": "https://studentaid.emory.edu/"
+ },
+ "McGill": {
+  "npc": "https://www.mcgill.ca/student-accounts/tuition-fees/general-tuition-and-fees-information/tuition-fees-2026-27",
+  "faid": "https://www.mcgill.ca/studentaid/government/us/governmentloans"
+ },
+ "UBC": {
+  "npc": "https://students.ubc.ca/finances/tuition-fees/undergraduate-tuition-fees/",
+  "faid": "https://students.ubc.ca/finances/student-loans/funding-us"
+ },
+ "University of Toronto": {
+  "npc": "https://tuitionexplorer.registrar.utoronto.ca/",
+  "faid": "https://www.registrar.utoronto.ca/financial-aid-awards/us-student-aid/us-government-student-loans/"
+ },
+ "Concordia": {
+  "npc": "https://www.concordia.ca/students/financial/tuition-fees/rates/undergrad.html",
+  "faid": "https://www.concordia.ca/students/financial/loans/us/federal-direct.html"
+ },
+ "McMaster": {
+  "npc": "https://registrar.mcmaster.ca/fees/undergraduate/",
+  "faid": "https://registrar.mcmaster.ca/?p=23792"
+ },
+ "Memorial": {
+  "npc": "https://www.mun.ca/undergrad/money-matters/",
+  "faid": "https://www.mun.ca/scholarships/financial-aid/us-student-aid-title-iv/"
+ },
+ "St Andrews": {
+  "npc": "https://www.st-andrews.ac.uk/study/tuition-fees/undergraduate/",
+  "faid": "https://www.st-andrews.ac.uk/study/fees-and-funding/us-funding/federal-aid"
+ },
+ "Edinburgh": {
+  "npc": "https://study.ed.ac.uk/programmes/undergraduate-fees?programme_code=UTHISTY&year=2027",
+  "faid": "https://registryservices.ed.ac.uk/scholarships-and-student-funding/current-students/student-loans-and-grants/international-student-1"
+ },
+ "Glasgow": {
+  "npc": "https://www.gla.ac.uk/undergraduate/fees/intlfees/",
+  "faid": "https://www.gla.ac.uk/myglasgow/registry/finance/usloans/"
+ },
+ "Trinity College Dublin": {
+  "npc": "https://www.tcd.ie/courses/undergraduate/fees/",
+  "faid": "https://tcd.ie/academicregistry/fees-and-payments/federal-aid"
+ },
+ "University College Dublin": {
+  "npc": "https://www.ucd.ie/students/fees/noneucoursefees/internationalnon-euundergraduatefees202627/",
+  "faid": "https://www.ucd.ie/global/study-at-ucd/scholarshipsfinances/northamericaloans/usfederalaid/"
+ },
+ "University of Amsterdam": {
+  "npc": "https://www.uva.nl/en/education/fees-and-funding/tuition-fees/tuition-fees.html",
+  "faid": "https://www.uva.nl/en/education/fees-and-funding/masters-scholarships-and-loans/other-financial-aid/direct-loan-program"
+ },
+ "Maastricht": {
+  "npc": "https://www.maastrichtuniversity.nl/tuition-fees1",
+  "faid": "https://www.maastrichtuniversity.nl/support/your-studies-begin/international-students-coming-maastricht/financial-aid/us-direct-loans"
  }
 };
 window.CAMPUS_AID_META={"source": "U.S. Department of Education, IPEDS Institutional Characteristics 2024 (NPRICURL, FAIDURL), links checked October 6, 2026. Cal State calculators from the CSU system cost page; a few schools updated by hand where the federal listing had moved."};

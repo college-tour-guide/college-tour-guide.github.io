@@ -88,7 +88,20 @@ window.LOCAL_PHOTOS={
  "Wake Forest": "photos/wake-forest-university.jpg",
  "Case Western Reserve": "photos/case-western-reserve-university.jpg",
  "Tulane": "photos/tulane-university.jpg",
- "Emory": "photos/emory-university.jpg"
+ "Emory": "photos/emory-university.jpg",
+ "McGill": "photos/mcgill-university.jpg",
+ "UBC": "photos/university-of-british-columbia.jpg",
+ "University of Toronto": "photos/university-of-toronto.jpg",
+ "Concordia": "photos/concordia-university.jpg",
+ "McMaster": "photos/mcmaster-university.jpg",
+ "Memorial": "photos/memorial-university-of-newfoundland.jpg",
+ "St Andrews": "photos/university-of-st-andrews.jpg",
+ "Edinburgh": "photos/university-of-edinburgh.jpg",
+ "Glasgow": "photos/university-of-glasgow.jpg",
+ "Trinity College Dublin": "photos/trinity-college-dublin.jpg",
+ "University College Dublin": "photos/university-college-dublin.jpg",
+ "University of Amsterdam": "photos/university-of-amsterdam.jpg",
+ "Maastricht": "photos/maastricht-university.jpg"
 };
 window.PHOTO_SETUP_COMPLETE=true;
 window.PHOTO_SETUP_SUCCESS=89;
