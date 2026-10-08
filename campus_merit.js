@@ -609,10 +609,10 @@ window.CAMPUS_MERIT={
  "Trinity College Dublin": {
   "pct": null,
   "avg": null,
-  "programs": "Global Excellence Undergraduate Scholarship (EUR 2,000-5,000 off first-year tuition, rolling; some programs excluded)",
-  "note": "Awarded on a rolling basis, so apply early.",
+  "programs": "Global Excellence Undergraduate Scholarship (EUR 2,000-5,000 off first-year tuition; you must apply; natural sciences, computer science, engineering, medicine, and dentistry are excluded)",
+  "note": "The 2026 Americas deadline was April 1; 2027 dates are not yet posted.",
   "intl": true,
-  "lvl": 3
+  "lvl": 2
  },
  "University College Dublin": {
   "pct": null,
